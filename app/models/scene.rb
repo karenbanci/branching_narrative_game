@@ -1,3 +1,3 @@
 class Scene < ApplicationRecord
-  belongs_to :game
+  belongs_to :narrative
 end
