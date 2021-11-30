@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get "/devs", to: "pages#devs", as: :devs
   resource :users
   get "profile", to: "pages#profile", as: :profile
-  get "edit-profile", to: "pages#edit", as: :edit_user_registration
+  get "edit-profile", to: "pages#edit", as: :edit_profile
 end
