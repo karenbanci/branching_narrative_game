@@ -3,30 +3,15 @@ a {
 }
 
 // Button A =
-.button-a {
+.button-home {
   color: rgba(255,255,255,0.7);
   font-size: 25px;
   border: 1px solid rgba(255,255,255,0.7);
   padding: 8px 15px;
   border-radius: 10px;
 }
-.button-a:hover {
+.button-home:hover {
   text-decoration: none;
   color: white;
   border: 1px solid white;
-}
-
-// Button B =
-.button-b {
-  border: 1px solid rgba(146,20,12,0.7);
-  background-color: rgba(146,20,12,0.7);
-  padding: 10px 15px;
-  color: rgba(255,255,255,0.7);
-  border-radius: 10px;
-  letter-spacing: 1px;
-}
-.button-b:hover {
-  text-decoration: none;
-  color: white;
-  background-color: #92140C;
 }
