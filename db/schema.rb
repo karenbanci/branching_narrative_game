@@ -26,29 +26,21 @@ ActiveRecord::Schema.define(version: 2021_11_29_183318) do
     t.index ["scene_id"], name: "index_choices_on_scene_id"
   end
 
-  create_table "games", force: :cascade do |t|
-    t.string "name", default: "", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "narratives", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "game_id", null: false
     t.integer "progression", default: 0, null: false
     t.jsonb "pc", default: {}, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["game_id"], name: "index_narratives_on_game_id"
     t.index ["user_id"], name: "index_narratives_on_user_id"
   end
 
   create_table "scenes", force: :cascade do |t|
-    t.bigint "game_id", null: false
+    t.bigint "narrative_id", null: false
     t.text "story"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["game_id"], name: "index_scenes_on_game_id"
+    t.index ["narrative_id"], name: "index_scenes_on_narrative_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_183318) do
 
   add_foreign_key "choices", "scenes"
   add_foreign_key "choices", "scenes", column: "next_scene_id"
-  add_foreign_key "narratives", "games"
   add_foreign_key "narratives", "users"
-  add_foreign_key "scenes", "games"
+  add_foreign_key "scenes", "narratives"
 end
