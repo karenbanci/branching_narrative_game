@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+}
+
+// Button A =
+.button-home {
+  color: rgba(255,255,255,0.7);
+  font-size: 25px;
+  border: 1px solid rgba(255,255,255,0.7);
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+.button-home:hover {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+}
