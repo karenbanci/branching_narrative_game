@@ -12,7 +12,8 @@
     <ul class="navbar-nav mr-auto">
       <li> <%= link_to "Home", "#", class: "nav-link text-light" %> </li>
       <li> <%= link_to "About", "#", class: "nav-link text-light"  %> </li>
-      <li> <%= link_to "Suport", "#", class: "nav-link text-light mr-3"  %> </li>
+      <li> <%= link_to "Suport", "#", class: "nav-link text-light"  %> </li>
+      <li> <%= link_to "Devs", devs_path, class: "nav-link text-light mr-3"  %> </li>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
