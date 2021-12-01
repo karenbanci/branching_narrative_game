@@ -1,13 +1,13 @@
 <div class="container d-flex justify-content-center bg-dark">
 
-  <div class="card">
+  <div class="card-profile">
     <div class="card-body">
-      <div class="container text-center mt-5">
-        <h2>Profile</h2>
-      </div>
+
       <div class="d-flex justify-content-around mb-5">
-        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", class: "avatar" %>
-        <p>Email: <%= @user.email %></p>
+        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", class: "avatar-profile" %>
+        <div class="mt-4 pr-3">
+          <h2>Username <%= @user.username %></p></h2>
+        </div>
       </div>
       <%# editar profile %>
       <%= link_to "edit", edit_user_registration_path, class: "btn btn-danger btn-block mb-3" %>
