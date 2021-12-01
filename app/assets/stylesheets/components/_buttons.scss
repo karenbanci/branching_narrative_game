@@ -15,3 +15,15 @@ a {
   color: white;
   border: 1px solid white;
 }
+// Botões dos formulários
+.button-form {
+  color: $white;
+  background-color: $danger;
+  border-radius: 8px;
+  padding: 5px 20px;
+}
+
+.button-form:hover {
+  background-color: $red-hover;
+  color: $white;
+}
