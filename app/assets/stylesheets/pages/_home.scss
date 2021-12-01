@@ -16,3 +16,26 @@
   color: white;
   margin-bottom: 200px;
 }
+
+.home-content {
+  display: flex;
+  align-items: center;
+}
+
+.image-home {
+  height: 250px;
+  width: 100%;
+}
+
+.charac-home img {
+  width: 180px;
+  height: 100%;
+}
+
+.container-story {
+  margin: 60px 0 100px 0;
+}
+
+.container-charac {
+  margin-bottom: 120px;
+}
