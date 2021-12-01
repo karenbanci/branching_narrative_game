@@ -6,6 +6,12 @@ class PagesController < ApplicationController
 
   def devs
   end
+
+  def new
+    if logged_in?
+      redirect_to :controller => 'dashboard', :action => 'index'
+    end
+  end
   
   def profile
     @user = current_user
