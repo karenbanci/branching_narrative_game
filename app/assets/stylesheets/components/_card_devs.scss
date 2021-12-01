@@ -1,0 +1,33 @@
+.dev {
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 204px;
+    background-color: #92140C;
+    color: white;
+  }
+
+  .card img {
+    height: 200px;
+    width: 201px;
+    border-radius: 5px;
+  }
+
+  .card a {
+    color: white;
+  }
+
+  .card a:hover {
+    color: black;
+  }
+
+  .name {
+    color: #DAA520;
+  }
+
+  .fa-heart {
+    color: red;
+  }
+}
+
