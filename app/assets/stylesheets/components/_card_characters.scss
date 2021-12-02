@@ -1,0 +1,90 @@
+h2 {
+  color: $gold;
+}
+
+.container-character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  place-items: center;
+}
+
+.card-character {
+  position: relative;
+  height: 300px;
+  width: 280px;
+  display: block;
+  background-color: $red;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  transition: 0.4s linear;
+  margin-bottom: 80px;
+}
+.card-character .image-character {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-self: center;
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.image-character img {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.card-character:hover .image-character img {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.card-character:hover {
+  .title {
+    transform: translateY(-275px);
+    opacity: 0.6;
+    transition: transform 1.1s, opacity 1s;
+  }
+  .content {
+    transform: translateY(-275px);
+    opacity: 0.6;
+    transition: transform 1s, opacity 0.5s;
+  }
+  .subtitle {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 1s, opacity 1s;
+  }
+}
+
+.card-character .content {
+  width: 100%;
+  background-color: $red;
+  color: white;
+  text-align: justify;
+  padding: 5px 20px;
+  opacity: 0;
+}
+
+.card-character .title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  background-color: $red;
+  transform: translateY(-44px);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.content .subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  opacity: 0;
+  transform: translateY(226px);
+ }
