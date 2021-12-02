@@ -1,5 +1,9 @@
 .dev {
 
+  h3 {
+    color: #DAA520;
+  }
+
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -15,11 +19,11 @@
   }
 
   .card a {
-    color: white;
+    color: #DAA520;
   }
 
   .card a:hover {
-    color: black;
+    opacity: 0.5;
   }
 
   .name {
@@ -31,3 +35,10 @@
   }
 }
 
+.space-title {
+  padding: 50px 0 40px 0;
+}
+
+.space-card {
+  padding-bottom: 40px;
+}
