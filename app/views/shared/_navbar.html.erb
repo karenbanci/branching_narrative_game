@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-lewagon">
   <%= link_to profile_path, class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
@@ -10,9 +10,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li> <%= link_to "Home", "#", class: "nav-link text-light" %> </li>
-      <li> <%= link_to "About", "#", class: "nav-link text-light"  %> </li>
-      <li> <%= link_to "Suport", "#", class: "nav-link text-light"  %> </li>
+      <li> <%= link_to "Home", index_path, class: "nav-link text-light" %> </li>
       <li> <%= link_to "Devs", devs_path, class: "nav-link text-light mr-3"  %> </li>
       <% if user_signed_in? %>
         <li class="nav-item active">

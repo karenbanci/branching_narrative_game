@@ -4,3 +4,15 @@
   right: 16px;
   z-index: 1000;
 }
+
+.flash-success {
+  border: 2px solid #1EDD88;
+  background-color: #1EDD88;
+  color: white;
+}
+
+.flash-danger {
+  border: 2px solid #FD1015;
+  background-color: #FD1015;
+  color: white;
+}
