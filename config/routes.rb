@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resource :users
   get "profile", to: "pages#profile", as: :profile
   get "edit-profile", to: "pages#edit", as: :edit_profile
+  get "map", to: "pages#map", as: :map
 end
