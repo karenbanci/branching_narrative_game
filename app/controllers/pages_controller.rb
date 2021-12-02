@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def map
+  end
+
   def devs
   end
 
@@ -12,7 +15,7 @@ class PagesController < ApplicationController
       redirect_to :controller => 'dashboard', :action => 'index'
     end
   end
-  
+
   def profile
     @user = current_user
   end
