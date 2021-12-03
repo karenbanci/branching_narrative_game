@@ -45,19 +45,11 @@ h2 {
 
 .card-character:hover {
   .title {
-    transform: translateY(-275px);
-    opacity: 0.6;
-    transition: transform 1.1s, opacity 1s;
+    opacity: 0.8;
   }
-  .content {
-    transform: translateY(-275px);
-    opacity: 0.6;
-    transition: transform 1s, opacity 0.5s;
-  }
+  // }
   .subtitle {
     opacity: 1;
-    transform: translateY(0px);
-    transition: transform 1s, opacity 1s;
   }
 }
 
@@ -79,6 +71,7 @@ h2 {
   transform: translateY(-44px);
   margin-bottom: 5px;
   padding-bottom: 5px;
+  opacity: 0;
 }
 
 .content .subtitle {
@@ -86,5 +79,4 @@ h2 {
   font-weight: 300;
   color: white;
   opacity: 0;
-  transform: translateY(226px);
  }
