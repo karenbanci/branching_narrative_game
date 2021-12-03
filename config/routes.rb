@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   get "/devs", to: "pages#devs", as: :devs
   get "index", to: "pages#index", as: :index
   get "about", to: "pages#about", as: :about
-  resource :users
+
   get "profile", to: "pages#profile", as: :profile
   get "edit-profile", to: "pages#edit", as: :edit_profile
   get "map", to: "pages#map", as: :map
+
+  resources :scenes, only: [:show]
 end
