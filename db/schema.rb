@@ -60,7 +60,9 @@ ActiveRecord::Schema.define(version: 2021_12_03_144738) do
 
   create_table "scenes", force: :cascade do |t|
     t.text "story"
-    t.string "npc_position", default: "left", null: false
+    t.string "npc_position1", default: "left", null: false
+    t.string "npc_position2", default: "right", null: false
+    t.string "npc_position3", default: "center", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
