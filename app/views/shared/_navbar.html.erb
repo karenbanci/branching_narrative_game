@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
-  <%= link_to profile_path, class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <%= link_to index_path, class: "navbar-brand" do %>
+    <%= image_tag "logo_tree.png" %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,8 @@
     <ul class="navbar-nav mr-auto">
       <li> <%= link_to "Home", index_path, class: "nav-link text-light" %> </li>
       <li> <%= link_to "About", about_path, class: "nav-link text-light" %> </li>
-      <li> <%= link_to "Devs", devs_path, class: "nav-link text-light mr-3"  %> </li>
+      <li> <%= link_to "Devs", devs_path, class: "nav-link text-light" %> </li>
+      <li> <%= link_to "Profile", profile_path, class: "nav-link text-light mr-3" %> </li>
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
