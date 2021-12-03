@@ -17,20 +17,13 @@ ActiveRecord::Schema.define(version: 2021_12_03_144738) do
 
   create_table "choices", force: :cascade do |t|
     t.bigint "scene_id", null: false
-    t.bigint "consequence_id", null: false
+    t.bigint "next_scene_id"
+    t.string "action"
+    t.string "result"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["consequence_id"], name: "index_choices_on_consequence_id"
+    t.index ["next_scene_id"], name: "index_choices_on_next_scene_id"
     t.index ["scene_id"], name: "index_choices_on_scene_id"
-  end
-
-  create_table "consequences", force: :cascade do |t|
-    t.string "option", default: "", null: false
-    t.jsonb "result", default: {}, null: false
-    t.bigint "next_scene_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["next_scene_id"], name: "index_consequences_on_next_scene_id"
   end
 
   create_table "encounters", force: :cascade do |t|
@@ -80,9 +73,8 @@ ActiveRecord::Schema.define(version: 2021_12_03_144738) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "choices", "consequences"
   add_foreign_key "choices", "scenes"
-  add_foreign_key "consequences", "scenes", column: "next_scene_id"
+  add_foreign_key "choices", "scenes", column: "next_scene_id"
   add_foreign_key "encounters", "npcs"
   add_foreign_key "encounters", "scenes"
   add_foreign_key "narratives", "users"
