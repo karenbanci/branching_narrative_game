@@ -1,4 +1,5 @@
 <div id="story-data" data-story="<%= @story.to_json %>" data-story-index="0">
+<%= cl_image_tag @scene.background.key, height: 300, width: 400, crop: :fill if @scene.background.attached? %>
 
 <div class="container mt-5">
   <div class="dialogue">

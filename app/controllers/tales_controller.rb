@@ -7,7 +7,7 @@ class TalesController < ApplicationController
 
   def show
     @tale = Tale.find(params[:id])
-    @scenes = @tale.scenes
+    @scenes = @tale.scenes.order(:created_at)
   end
 
   def new

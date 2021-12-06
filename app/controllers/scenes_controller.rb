@@ -50,13 +50,13 @@ class ScenesController < ApplicationController
   def destroy
     # authorize @scene
     @scene.destroy
-    redirect_to scenes_url, notice: "Your scene has been deleted"
+    redirect_to @scene.tale, notice: "Your scene has been deleted"
   end
 
   private
 
   def scene_params
-    params.require(:scene).permit(:story, :npc_position1, :npc_position2, :npc_position3)
+    params.require(:scene).permit(:story, :npc_position1, :npc_position2, :npc_position3, :background)
   end
 
   def set_scene
