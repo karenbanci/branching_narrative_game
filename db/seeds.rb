@@ -1,4 +1,5 @@
-# =============================================================================================================
+User.destroy_all
+#=============================================================================================================
 # USERS
 # =============================================================================================================
 user = User.create!(email: "test@test.com", password: "batata", username: "test")
@@ -42,6 +43,17 @@ scene_2 = Scene.create!(
     Before you can leave, however, you feel the wind being cut next to your cheeks, accompanied by a hissing sound. There's no mistaking it: the flight of an arrow. {newline}
     ? "Not so fast. Stay still and lay down your arms. You are surrounded." {newline}
     The voice is coming from behind you, but as you turn to look, you see only the dark forest.
+  )
+)
+
+scene_3 = Scene.create!(
+  story: %(
+    {npc1} "Cheers to that, capt'n! Stop worrying that pretty face of yours and sing us a song, will ya?" {newline}
+    {npc2} "Sing one yourself, minstrel. The only song I'll ever sing will be your [requiem]." {newline}
+
+    As your two underlings continue their endless bickering, you sense something... you feel the wind being cut next to your cheeks, accompanied by a hissing sound. There's no mistaking it: the flight of an arrow. {newline}
+
+    ?: "Lay down your arms and funerary rites won't be necessary. You are surrounded."
   )
 )
 
@@ -114,6 +126,12 @@ scene_12 = Scene.create!(
   story: %(
     As you finish uttering your words, the realization hits you: they will be your last. You look towards your left, from where the female voice was coming, and see, for a fraction of a second, the glint of an arrowhead. As it is loosened, you hear your companions shouting and drawing their wepons. {newline}
     You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can’t help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
+    You are dead.
+  )
+)
+
+scene_13 = Scene.create!(
+  story: %(
     You are dead.
   )
 )
@@ -250,88 +268,97 @@ Choice.create!(action: "I think the two of you deserve each other.", result: " "
 Choice.create!(action: "What do I think? I act. Let us search for him.", result: " ", next_scene: scene_2, scene: scene_1)
 
 # scene 2
-Choice.create!(option: "You missed.", result: {}, next_scene: scene_5, scene: scene_2)
-Choice.create!(option: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_2 )
-Choice.create!(option: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_2 )
-Choice.create!(option: "We are called The Dead Men for a reason, cowards. Strike true!", result: {}, next_scene: scene_8, scene: scene_2 )
+Choice.create!(action: "You missed.", result: "", next_scene: scene_5, scene: scene_2)
+Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_2 )
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_2 )
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_2 )
+
+# scene 3
+Choice.create!(action: "Show yourselves! We mean no harm!", result: "", next_scene: scene_6, scene: scene_3)
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_3)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_3)
 
 # scene 4
-Choice.create!(option: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_4)
-Choice.create!(option: "We are called The Dead Men for a reason, cowards. Strike true!", result: { }, next_scene: scene_8, scene_4 )
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_4)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_4)
 
 # scene 5
-Choice.create!(option: "Monkey? So you are elves.", result: {}, next_scene: scene_9, scene: scene_5)
-Choice.create!(option: "You dare call us thieves?", result: {}, next_scene: scene_10, scene: scene_5 )
+Choice.create!(action: "Monkey? So you are elves.", result: "", next_scene: scene_9, scene: scene_5)
+Choice.create!(action: "You dare call us thieves?", result: "", next_scene: scene_10, scene: scene_5 )
 
 # scene 6
-Choice.create!(option: "Sir Raelys? You expect me to believe you a noble?", result: {}, next_scene: scene_11, scene: scene_6 )
-Choice.create!(option: "Lay down your arms, and instruct your [confrars] to do the same", result: { +1 Peace }, next_scene: scene_7, scene: scene_6)
-Choice.create!(option: "We are called The Dead Men for a reason, cowards. Strike true!", result: {}, next_scene: scene_8, scene: scene_6)
+Choice.create!(action: "Sir Raelys? You expect me to believe you a noble?", result: "", next_scene: scene_11, scene: scene_6 )
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same", result: { peace: 1 }, next_scene: scene_7, scene: scene_6)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_6)
 
 # scene 7
-Choice.create!(option: "Chaos ensues.", result: { }, next_scene: scene_14, scene: scene_7)
+Choice.create!(action: "Chaos ensues.", result: "", next_scene: scene_14, scene: scene_7)
 
 # scene 8
-Choice.create!(option: "Chaos ensues.", result: {}, next_scene: scene_14, scene: scene_8)
+Choice.create!(action: "Chaos ensues.", result: "", next_scene: scene_14, scene: scene_8)
 
 # scene 9
-Choice.create!(option: "Show yourselves! We mean no harm!", result: { +1 Peace }, next_scene: scene_6, scene: scene_9)
-Choice.create!(option: "Lay down your arms, and instruct your [confrars] to do the same.", result: { +1 Peace }, next_scene: scene_7, scene: scene_9)
-Choice.create!(option: "We are called The Dead Men for a reason, cowards. Strike true!", result: {}, next_scene: scene_8, scene: scene_9)
+Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_9)
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_9)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_9)
 
 # scene 10
-Choice.create!(option: "What Choices, ''hare''?", result: {}, next_scene: scene_12, scene: scene_10 )
-Choice.create!(option: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_10)
-Choice.create!(option: "We are called The Dead Men for a reason, cowards. Strike true!", result: {}, next_scene: scene_8, scene: scene_10 )
-Choice.create!(option: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_10 )
+Choice.create!(action: "What Choices, ''hare''?", result: "", next_scene: scene_12, scene: scene_10 )
+Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_10)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_10 )
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_10 )
 
 # scene 11
-Choice.create!(option: "Lay down your arms, and instruct your [confrars] to do the same.", result: {+1 Peace}, next_scene: scene_7, scene: scene_11)
-Choice.create!(option: "We are called The Dead Men for a reason, cowards. Strike true!", result: {}, next_scene: scene_8, scene: scene_11)
+Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: {peace: 1 }, next_scene: scene_7, scene: scene_11)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_11)
 
 # scene 12
-Choice.create!(option: "You are dead.", result: {}, next_scene: scene_13, scene: scene_12)
+Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_12)
 
 # scene 14
-Choice.create!(option: "My friends lie dead! And so does your leader! What is the point of so much bloodshed!? Release me and we can come to terms!", result: {+1 Peace}, next_scene: scene_15, scene: scene_14)
-Choice.create!(option: "You savages, do you have any idea who you have crossed? Release me, or I'll have my friend kill each and every one of you!", result: {}, next_scene: scene_16, scene: scene_14)
+Choice.create!(action: "My friends lie dead! And so does your leader! What is the point of so much bloodshed!? Release me and we can come to terms!", result: {peace: 1 }, next_scene: scene_15, scene: scene_14)
+Choice.create!(action: "You savages, do you have any idea who you have crossed? Release me, or I'll have my friend kill each and every one of you!", result: "", next_scene: scene_16, scene: scene_14)
 
 # scene 15
-Choice.create!(option: "They talk amongst themselves.", result: {}, next_scene: scene_17, scene: scene_15)
+Choice.create!(action: "They talk amongst themselves.", result: "", next_scene: scene_17, scene: scene_15)
 
 # scene 16
-Choice.create!(option: "They talk amongst themselves.", result: {}, next_scene: scene_17, scene: scene_16)
+Choice.create!(action: "They talk amongst themselves.", result: "", next_scene: scene_17, scene: scene_16)
 
 # scene 17
-Choice.create!(option: "You wish to ally with us? Are you completely mad?", result: {}, next_scene: scene_18, scene: scene_17)
-Choice.create!(option: "I have argued for peace from the very start! You were the ones who attacked us!", result: {ONLY IF PEACEFUL}, next_scene: scene_19, scene: scene_17)
+Choice.create!(action: "You wish to ally with us? Are you completely mad?", result: "", next_scene: scene_18, scene: scene_17)
+Choice.create!(action: "I have argued for peace from the very start! You were the ones who attacked us!", result: {
+  #ONLY IF PEACEFUL
+  }, next_scene: scene_19, scene: scene_17)
 
 # scene 18
-Choice.create!(option: "I... accept. I will lead you. But do not believe for a moment I will forget what you have done.", result: {+ Bound}, next_scene: scene_21, scene: scene_18)
-Choice.create!(option: "I am a Dead Man to the end. Do what you must.", result: {}, next_scene: scene_20, scene: scene_18)
+Choice.create!(action: "I... accept. I will lead you. But do not believe for a moment I will forget what you have done.", result: {
+  # + Bound
+  }, next_scene: scene_21, scene: scene_18)
+Choice.create!(action: "I am a Dead Man to the end. Do what you must.", result: "", next_scene: scene_20, scene: scene_18)
 
 # scene 19
-Choice.create!(option: "I am a Dead Man to the end. Do what you must.", result: {}, next_scene: scene_20, scene: scene_19)
-Choice.create!(option: "I... accept. I will lead The Last Legion. Jorek, stand down. From this moment forward these are our [confrars]...", result: {}, next_scene: scene_22, scene: scene_19)
+Choice.create!(action: "I am a Dead Man to the end. Do what you must.", result: "", next_scene: scene_20, scene: scene_19)
+Choice.create!(action: "I... accept. I will lead The Last Legion. Jorek, stand down. From this moment forward these are our [confrars]...", result: "", next_scene: scene_22, scene: scene_19)
 
 # scene 20
-Choice.create!(option: "You are dead.", result: {}, next_scene: scene_13, scene: scene_20)
+Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_20)
 
 # scene 21
-Choice.create!(option: "Untie me, I command all of you! Elf, you are on watch tonight. Mage, dispose of the body of your former captain as you see fit. And you, brute, stay out of my way. Jorek, come with me, we shall cremate our comrades according to [Solist] tradition.", result: {}, next_scene: scene_24, scene: scene_21)
-Choice.create!(option: "Untie me, I command all of you! Jorek, draw your blades and help me to slay these murderers!", result: {}, next_scene: scene_23, scene: scene_21)
+Choice.create!(action: "Untie me, I command all of you! Elf, you are on watch tonight. Mage, dispose of the body of your former captain as you see fit. And you, brute, stay out of my way. Jorek, come with me, we shall cremate our comrades according to [Solist] tradition.", result: "", next_scene: scene_24, scene: scene_21)
+Choice.create!(action: "Untie me, I command all of you! Jorek, draw your blades and help me to slay these murderers!", result: "", next_scene: scene_23, scene: scene_21)
 
 # scene 22
-Choice.create!(option: "We depart at first light. One of you should set up watch. The others should dispose of Sir Raelys' body according to elven tradition. We shall do the same for our fallen [confrars] according to [Solist] tradition.", result: {}, next_scene: scene_25, scene: scene_22)
+Choice.create!(action: "We depart at first light. One of you should set up watch. The others should dispose of Sir Raelys' body according to elven tradition. We shall do the same for our fallen [confrars] according to [Solist] tradition.", result: {}, next_scene: scene_25, scene: scene_22)
 
 # scene 23
-Choice.create!(option: "You are dead.", result: {}, next_scene: scene_13, scene: scene_23)
+Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_23)
 
 # scene 24
-Choice.create!(option: "You and Jorek move towards the bodies of your fallen [confrars].", result: {}, next_scene: scene_26, scene: scene_24)
+Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_24)
 
 # scene 25
-Choice.create!(option: "You and Jorek move towards the bodies of your fallen [confrars].", result: {}, next_scene: scene_26, scene: scene_25)
+Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_25)
 
 # =============================================================================================================
 # ENCOUNTER
@@ -342,6 +369,10 @@ Encounter.create!(scene: scene_1, npc: ziraldo)
 
 # scene 2
 Encounter.create!(scene: scene_2, npc: halia)
+
+# scene 3
+Encounter.create!(scene: scene_3, npc: ziraldo)
+Encounter.create!(scene: scene_3, npc: halia)
 
 # scene 4
 Encounter.create!(scene: scene_4, npc: halia)
