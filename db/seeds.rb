@@ -247,8 +247,7 @@ scene_21 = Scene.create!(
     {npc1} "Come out, dwarf. It seems we are all brothers and sisters now. [''Confrars'']." {newline}
     The elf says the last work mockinly. Still, Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc2} "Captain? I cannot believe this..." {newline}
-    {npc3} "At least we agree on that, little one." {newline}
-    {npc4} "I expect we shall depart at first light?"
+    {npc3} "I expect we shall depart at first light?"
   )
 )
 
@@ -259,7 +258,6 @@ scene_22 = Scene.create!(
     {npc1} "Captain? I... trust your better judgement. I hope we don't live to regret this" {newline}
     {npc2} "I will make sure you live to regret the murder of Sir Raelys, little one." {newline}
     {npc1} "Worry not, you oaf. I can send you to him whenever you wish me to." {newline}
-    {npc3} "Put your past squabbles behind you. We all have a common goal now." {newline}
     {npc4} "I expect we shall depart at first light?"
   )
 )
@@ -293,7 +291,48 @@ scene_25 = Scene.create!(
 scene_26 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I got their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't act sooner, cap
+    {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I got their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't find an opening sooner, captain." {newline}
+    He starts dragging the bodies of Halia and Ziraldo, and arranges them neatly into a pile, surrounded by leaves, twigs, and firewood from the campfire. {newline}
+    {npc1} "This is a weird custom of yours, if you don't mind me saying. Back in [Tuquoc] we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
+    Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
+  )
+)
+
+scene_27 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Jorek nods in comtemplation, as you move to grab a burning log from the campfire and toss it into the funeral pyre. Slowly, the fire catches on, and soon the bodies of your comrades are set ablaze. {newline}
+    {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
+  )
+)
+
+scene_28 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Jorek nods in resignation, as you move to grab a burning log from the campfire and toss it into the funeral pyre. Slowly, the fire catches on, and soon the bodies of your comrades are set ablaze. {newline}
+    {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
+  )
+)
+
+scene_29 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    {npc1} "And what a struggle it will be. Slaying a dragon... I hope we are up to the task. Rest, my [confrars]." {newline}
+    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
+    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards [Adrarth's Hoard]. {newline}
+
+    End of Act I...
+  )
+)
+
+scene_30 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Jorek takes your cue and remains silent as well, wathcing as the bodies burn in front of him. {newline}
+    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
+    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards [Adrarth's Hoard]. {newline}
+
+    End of Act I...
   )
 )
 
@@ -398,6 +437,18 @@ Choice.create!(action: "You and Jorek move towards the bodies of your fallen [co
 # scene 25
 Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_25)
 
+# scene 26
+Choice.create!(action: "Stay silent."., result: "", next_scene: scene_28, scene: scene_26)
+Choice.create!(action: "You bury your bodies to return them to the stone, you said? We burn ours, to return them to the Sun. The fire consumes the flesh, but also cleanses it, it is a ritual of purification.", result: "", next_scene: scene_27, scene: scene_25)
+
+# scene 27
+Choice.create!(action: "Remain silent."., result: "", next_scene: scene_30, scene: scene_27)
+Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_27)
+
+# scene 28
+Choice.create!(action: "Remain silent."., result: "", next_scene: scene_30, scene: scene_28)
+Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_28)
+
 # =============================================================================================================
 # ENCOUNTER
 # =============================================================================================================
@@ -454,13 +505,11 @@ Encounter.create!(scene: scene_19, npc: agronak)
 # scene 21
 Encounter.create!(scene: scene_21, npc: valena)
 Encounter.create!(scene: scene_21, npc: jorek)
-Encounter.create!(scene: scene_21, npc: agronak)
 Encounter.create!(scene: scene_21, npc: barnabas)
 
 # scene 22
 Encounter.create!(scene: scene_22, npc: jorek)
 Encounter.create!(scene: scene_22, npc: agronak)
-Encounter.create!(scene: scene_22, npc: valena)
 Encounter.create!(scene: scene_22, npc: barnabas)
 
 # scene 23
@@ -474,3 +523,15 @@ Encounter.create!(scene: scene_25, npc: jorek)
 
 # scene 26
 Encounter.create!(scene: scene_26, npc: jorek)
+
+# scene 27
+Encounter.create!(scene: scene_27, npc: jorek)
+
+# scene 28
+Encounter.create!(scene: scene_28, npc: jorek)
+
+# scene 29
+Encounter.create!(scene: scene_29, npc: jorek)
+
+# scene 30
+Encounter.create!(scene: scene_30, npc: jorek)
