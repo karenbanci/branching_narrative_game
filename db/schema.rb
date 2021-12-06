@@ -10,27 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_144738) do
+ActiveRecord::Schema.define(version: 2021_12_06_014444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "choices", force: :cascade do |t|
     t.bigint "scene_id", null: false
-    t.bigint "consequence_id", null: false
+    t.bigint "next_scene_id"
+    t.string "action"
+    t.string "result"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["consequence_id"], name: "index_choices_on_consequence_id"
+    t.index ["next_scene_id"], name: "index_choices_on_next_scene_id"
     t.index ["scene_id"], name: "index_choices_on_scene_id"
-  end
-
-  create_table "consequences", force: :cascade do |t|
-    t.string "option", default: "", null: false
-    t.jsonb "result", default: {}, null: false
-    t.bigint "next_scene_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["next_scene_id"], name: "index_consequences_on_next_scene_id"
   end
 
   create_table "encounters", force: :cascade do |t|
@@ -65,6 +58,17 @@ ActiveRecord::Schema.define(version: 2021_12_03_144738) do
     t.string "npc_position3", default: "center", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "tale_id", null: false
+    t.index ["tale_id"], name: "index_scenes_on_tale_id"
+  end
+
+  create_table "tales", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_tales_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,10 +84,11 @@ ActiveRecord::Schema.define(version: 2021_12_03_144738) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "choices", "consequences"
   add_foreign_key "choices", "scenes"
-  add_foreign_key "consequences", "scenes", column: "next_scene_id"
+  add_foreign_key "choices", "scenes", column: "next_scene_id"
   add_foreign_key "encounters", "npcs"
   add_foreign_key "encounters", "scenes"
   add_foreign_key "narratives", "users"
+  add_foreign_key "scenes", "tales"
+  add_foreign_key "tales", "users"
 end
