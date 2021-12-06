@@ -22,9 +22,8 @@ ActiveStorage.start()
 import "bootstrap";
 
 // Internal imports, e.g:
-import { initTyped } from '../components/init_typed';
-
+import { initNarrative } from '../components/init_narrative';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  initTyped();
+  initNarrative();
 });

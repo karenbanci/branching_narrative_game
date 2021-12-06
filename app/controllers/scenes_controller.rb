@@ -7,7 +7,7 @@ class ScenesController < ApplicationController
     @scene.npcs.each_with_index do |npc, index|
       dialogues.gsub!("{npc#{index+1}}", npc.name)
     end
-    @story = dialogues.split("{newline}").map { |d| "#{d}^4000" }
+    @story = dialogues.split("{newline}")
   end
 
   def edit
