@@ -40,7 +40,7 @@ scene_1 = Scene.create!(
   npc_position1: "left",
   npc_position2: "right",
   story: %(
-    Welcome, {pc_name}, to a magical land populated by men, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
+    Welcome, {pc_name}, to a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
     {npc1} "Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     {npc2} "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
@@ -141,7 +141,7 @@ scene_10 = Scene.create!(
 scene_11 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "Many elves have been knighted since the [Aurea Act]. You can believe as you wish. I will you ask again: will you comply and lay down your arms?"
+    {npc1} "Many elves have been knighted since the [Aurea Act]. You can believe as you wish, it matters little to me. I will you ask again: will you comply and lay down your arms?"
   )
 )
 
@@ -150,7 +150,8 @@ scene_12 = Scene.create!(
   story: %(
     As you finish uttering your words, the realization hits you: they will be your last. You look towards your left, from where the female voice was coming, and see, for a fraction of a second, the glint of an arrowhead. As it is loosened, you hear your companions shouting and drawing their wepons. {newline}
     You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can’t help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
-    You are dead.
+
+    You are dead...
   )
 )
 
@@ -237,7 +238,9 @@ scene_20 = Scene.create!(
   story: %(
     The elf looks to her companions and sighs. She nods her head, and the barbarian lifts his greataxe, eager to end your life. As he is about to strike, Jorek jumps down from a tree, trying to land on the man's back. {newline}
     But before he reaches his target, Barnabas lifts his staff and holds the dwarf suspended midair. You see Valena draw her bow and nock an arrow, pointing it towards him. Before she can fire it, your hear the swing of the axe. {newline}
-    {npc1} "Die, scum!"
+    {npc1} "Die, scum!" {newline}
+
+    You are dead...
   )
 )
 
@@ -254,7 +257,7 @@ scene_21 = Scene.create!(
 scene_22 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
+    Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc1} "Captain? I... trust your better judgement. I hope we don't live to regret this" {newline}
     {npc2} "I will make sure you live to regret the murder of Sir Raelys, little one." {newline}
     {npc1} "Worry not, you oaf. I can send you to him whenever you wish me to." {newline}
@@ -268,6 +271,8 @@ scene_23 = Scene.create!(
     As soon as the elf unties you, you reach for a knife in her belt, and stab her with it. As you give Jorek the order to attack, Agronak engages him in combat. You feel a stinging pain in your chest. {newline}
     {npc1} "Your vow was bound by magic. Once you break a magical oath, your heart stops beating." {newline}
     The pain in your chest surges. Your breath falters. You fall to your knees.
+
+    You are dead...
   )
 )
 
@@ -514,9 +519,6 @@ Encounter.create!(scene: scene_22, npc: barnabas)
 
 # scene 23
 Encounter.create!(scene: scene_23, npc: barnabas)
-
-# scene 24
-Encounter.create!(scene: scene_24, npc: jorek)
 
 # scene 25
 Encounter.create!(scene: scene_25, npc: jorek)
