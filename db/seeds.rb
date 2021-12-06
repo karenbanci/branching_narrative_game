@@ -14,7 +14,7 @@ user = User.create!(email: "test@test.com", password: "batata", username: "test"
 # =============================================================================================================
 # TALES
 # =============================================================================================================
-tale_1 = Tale.create!(name: "The Hoard of Adrarth", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", user: user)
+tale_1 = Tale.create!(name: "Ardrath's Hoard", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", user: user)
 
 # =============================================================================================================
 # NARRATIVES
@@ -40,7 +40,7 @@ scene_1 = Scene.create!(
   npc_position1: "left",
   npc_position2: "right",
   story: %(
-    Welcome, {pc_name}, to a magical land populated by men, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
+    Welcome, {pc_name}, to a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
     {npc1} "Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     {npc2} "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
@@ -64,11 +64,11 @@ scene_3 = Scene.create!(
   tale: tale_1,
   story: %(
     {npc1} "Cheers to that, capt'n! Stop worrying that pretty face of yours and sing us a song, will ya?" {newline}
-    {npc2} "Sing one yourself, minstrel. The only song I'll ever sing will be your [requiem]." {newline}
+    {npc2} "Sing one yourself, minstrel. The only song I'll ever sing will be at your funeral." {newline}
 
     As your two underlings continue their endless bickering, you sense something... you feel the wind being cut next to your cheeks, accompanied by a hissing sound. There's no mistaking it: the flight of an arrow. {newline}
 
-    ?: "Lay down your arms and funerary rites won't be necessary. You are surrounded."
+    ?: "Lay down your arms and a funeral won't be necessary. You are surrounded."
   )
 )
 
@@ -129,7 +129,7 @@ scene_9 = Scene.create!(
 scene_10 = Scene.create!(
   tale: tale_1,
   story: %(
-    ? "We overheard your conversation. We know you are after [Adrarth's Hoard]." {newline}
+    ? "We overheard your conversation. We know you are after [Ardrath's Hoard]." {newline}
     {npc1} "No honor among thieves, then?" {newline}
     ? "The treasure is mine by ''right'', human." {newline}
     {npc2} "Unless we get to it first, [hare]." {newline}
@@ -141,7 +141,7 @@ scene_10 = Scene.create!(
 scene_11 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "Many elves have been knighted since the [Aurea Act]. You can believe as you wish. I will you ask again: will you comply and lay down your arms?"
+    {npc1} "Many elves have been knighted since the [Aurea Act]. You can believe as you wish, it matters little to me. I will you ask again: will you comply and lay down your arms?"
   )
 )
 
@@ -150,7 +150,8 @@ scene_12 = Scene.create!(
   story: %(
     As you finish uttering your words, the realization hits you: they will be your last. You look towards your left, from where the female voice was coming, and see, for a fraction of a second, the glint of an arrowhead. As it is loosened, you hear your companions shouting and drawing their wepons. {newline}
     You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can’t help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
-    You are dead.
+
+    You are dead...
   )
 )
 
@@ -197,7 +198,7 @@ scene_17 = Scene.create!(
     {npc1} "Sir Faelyn is dead. We have no captain." {newline}
     The brute speaks up. {newline}
     ?: "We don't need one. Who cares if they call us a [Confraternity] or not? I care not who leads us, Valena. We should kill this weakling and hunt down the dwarf!" {newline}
-    {npc2} "Even if we manage to uncover [Adrarth's Hoard], we would have no claim to it. We would be treated as little more than a band of thieves, Agronak." {newline}
+    {npc2} "Even if we manage to uncover [Ardrath's Hoard], we would have no claim to it. We would be treated as little more than a band of thieves, Agronak." {newline}
     {npc1} "We would lack the legitamacy afforded by the [King]." {newline}
     {npc3} "And so you wish to ally with the men who killed Sir Faelyn?" {newline}
     {npc2} "I wish to recover the relics that were stolen from my people by that dragon. As did our late captain, need I remind you?" {newline}
@@ -237,29 +238,29 @@ scene_20 = Scene.create!(
   story: %(
     The elf looks to her companions and sighs. She nods her head, and the barbarian lifts his greataxe, eager to end your life. As he is about to strike, Jorek jumps down from a tree, trying to land on the man's back. {newline}
     But before he reaches his target, Barnabas lifts his staff and holds the dwarf suspended midair. You see Valena draw her bow and nock an arrow, pointing it towards him. Before she can fire it, your hear the swing of the axe. {newline}
-    {npc1} "Die, scum!"
+    {npc1} "Die, scum!" {newline}
+
+    You are dead...
   )
 )
 
 scene_21 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "Come out, dwarf. It seems we are all brothers and sisters now. [''Confrars'']." {newline}
+    {npc1} "Come out, dwarf. It seems we are all brothers and sisters now. [Confrars]." {newline}
     The elf says the last work mockinly. Still, Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc2} "Captain? I cannot believe this..." {newline}
-    {npc3} "At least we agree on that, little one." {newline}
-    {npc4} "I expect we shall depart at first light?"
+    {npc3} "I expect we shall depart at first light?"
   )
 )
 
 scene_22 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
+    Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc1} "Captain? I... trust your better judgement. I hope we don't live to regret this" {newline}
     {npc2} "I will make sure you live to regret the murder of Sir Raelys, little one." {newline}
     {npc1} "Worry not, you oaf. I can send you to him whenever you wish me to." {newline}
-    {npc3} "Put your past squabbles behind you. We all have a common goal now." {newline}
     {npc4} "I expect we shall depart at first light?"
   )
 )
@@ -270,6 +271,8 @@ scene_23 = Scene.create!(
     As soon as the elf unties you, you reach for a knife in her belt, and stab her with it. As you give Jorek the order to attack, Agronak engages him in combat. You feel a stinging pain in your chest. {newline}
     {npc1} "Your vow was bound by magic. Once you break a magical oath, your heart stops beating." {newline}
     The pain in your chest surges. Your breath falters. You fall to your knees.
+
+    You are dead...
   )
 )
 
@@ -293,7 +296,48 @@ scene_25 = Scene.create!(
 scene_26 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I got their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't act sooner, cap
+    {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I got their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't find an opening sooner, captain." {newline}
+    He starts dragging the bodies of Halia and Ziraldo, and arranges them neatly into a pile, surrounded by leaves, twigs, and firewood from the campfire. {newline}
+    {npc1} "This is a weird custom of yours, if you don't mind me saying. Back in [Tuquoc] we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
+    Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
+  )
+)
+
+scene_27 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Jorek nods in comtemplation, as you move to grab a burning log from the campfire and toss it into the funeral pyre. Slowly, the fire catches on, and soon the bodies of your comrades are set ablaze. {newline}
+    {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
+  )
+)
+
+scene_28 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Jorek nods in resignation, as you move to grab a burning log from the campfire and toss it into the funeral pyre. Slowly, the fire catches on, and soon the bodies of your comrades are set ablaze. {newline}
+    {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
+  )
+)
+
+scene_29 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    {npc1} "And what a struggle it will be. Slaying a dragon... I hope we are up to the task. Rest, my [confrars]." {newline}
+    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
+    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards [Ardrath's Hoard]. {newline}
+
+    End of Act I...
+  )
+)
+
+scene_30 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Jorek takes your cue and remains silent as well, wathcing as the bodies burn in front of him. {newline}
+    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
+    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards [Ardrath's Hoard]. {newline}
+
+    End of Act I...
   )
 )
 
@@ -383,11 +427,11 @@ Choice.create!(action: "I... accept. I will lead The Last Legion. Jorek, stand d
 Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_20)
 
 # scene 21
-Choice.create!(action: "Untie me, I command all of you! Elf, you are on watch tonight. Mage, dispose of the body of your former captain as you see fit. And you, brute, stay out of my way. Jorek, come with me, we shall cremate our comrades according to [Solist] tradition.", result: "", next_scene: scene_24, scene: scene_21)
+Choice.create!(action: "Untie me, I command all of you! Elf, you are on watch tonight. Mage, dispose of the body of your former captain as you see fit. And you, brute, stay out of my way. Jorek, come with me, we shall cremate our comrades in accordance with the word of [God]", result: "", next_scene: scene_24, scene: scene_21)
 Choice.create!(action: "Untie me, I command all of you! Jorek, draw your blades and help me to slay these murderers!", result: "", next_scene: scene_23, scene: scene_21)
 
 # scene 22
-Choice.create!(action: "We depart at first light. One of you should set up watch. The others should dispose of Sir Raelys' body according to elven tradition. We shall do the same for our fallen [confrars] according to [Solist] tradition.", result: {}, next_scene: scene_25, scene: scene_22)
+Choice.create!(action: "We depart at first light. One of you should set up watch. The others should dispose of Sir Raelys' body according to elven tradition. We shall do the same for our fallen [confrars] according to the word of [God].", result: {}, next_scene: scene_25, scene: scene_22)
 
 # scene 23
 Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_23)
@@ -397,6 +441,18 @@ Choice.create!(action: "You and Jorek move towards the bodies of your fallen [co
 
 # scene 25
 Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_25)
+
+# scene 26
+Choice.create!(action: "Stay silent.", result: "", next_scene: scene_28, scene: scene_26)
+Choice.create!(action: "You bury your bodies to return them to the stone, you said? We burn ours, to return them to the Sun. The fire consumes the flesh, but also cleanses it, it is a ritual of purification.", result: "", next_scene: scene_27, scene: scene_25)
+
+# scene 27
+Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_27)
+Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_27)
+
+# scene 28
+Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_28)
+Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_28)
 
 # =============================================================================================================
 # ENCOUNTER
@@ -454,23 +510,56 @@ Encounter.create!(scene: scene_19, npc: agronak)
 # scene 21
 Encounter.create!(scene: scene_21, npc: valena)
 Encounter.create!(scene: scene_21, npc: jorek)
-Encounter.create!(scene: scene_21, npc: agronak)
 Encounter.create!(scene: scene_21, npc: barnabas)
 
 # scene 22
 Encounter.create!(scene: scene_22, npc: jorek)
 Encounter.create!(scene: scene_22, npc: agronak)
-Encounter.create!(scene: scene_22, npc: valena)
 Encounter.create!(scene: scene_22, npc: barnabas)
 
 # scene 23
 Encounter.create!(scene: scene_23, npc: barnabas)
-
-# scene 24
-Encounter.create!(scene: scene_24, npc: jorek)
 
 # scene 25
 Encounter.create!(scene: scene_25, npc: jorek)
 
 # scene 26
 Encounter.create!(scene: scene_26, npc: jorek)
+
+# scene 27
+Encounter.create!(scene: scene_27, npc: jorek)
+
+# scene 28
+Encounter.create!(scene: scene_28, npc: jorek)
+
+# scene 29
+Encounter.create!(scene: scene_29, npc: jorek)
+
+# scene 30
+Encounter.create!(scene: scene_30, npc: jorek)
+
+# =============================================================================================================
+# POPUPS
+# =============================================================================================================
+
+Popup.create!(name: "[Confraternity]", description: "A band of brothers and sisters led by member of the nobility gathered together for a common cause." )
+
+Popup.create!(name: "[Ardrath's Hoard]", description: "A legendary treasure stolen from elvish lands rumored to be guarded by Ardrath, one of the last living dragons." )
+
+Popup.create!(name: "[Elgenwode]", description: "A vast span of untamed wilderness to which the elves were banished in ages long past." )
+
+Popup.create!(name: "[monkey]", description: "A derogatory term used to describe humans, due to their bearded faces and hairy bodies, similar to apes." )
+
+Popup.create!(name: "[hare]", description: "A derogatory term used to describe elves, due to their long and pointed ears, similar to rabbits." )
+
+Popup.create!(name: "[Aurea Act]", description: "An incredibly recent development in human-elvish relations, the Aurea Act freed all elves from slavery and allowed them to become knights." )
+
+Popup.create!(name: "[King]", description: "King Edmon, the half-elven bastard child of the late King Omen, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
+
+Popup.create!(name: "[Kingdom]", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
+
+Popup.create!(name: "[Confrars]", description: "A caring term used by members of a Confraternity to address one another, similar to being called a sibling.")
+
+Popup.create!(name: "[Tuquoc]", description: "The capital city of the Kingdom of the Dwarves, located far away in the west, under the mountains and past the great ocean.")
+
+Popup.create!(name: "[God]", description: "The official religion of the human Kingdom is defined by the Church, which holds that the Sun is the personification of God, and the sacred gift of life is derived from it.")
