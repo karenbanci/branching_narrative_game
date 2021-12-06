@@ -2,7 +2,12 @@ class ScenesController < ApplicationController
   before_action :set_scene, only: %i[show edit update destroy]
   def show
     @scene = Scene.find(params[:id])
-    @story = @scene.story.gsub("{newline}", "<br>").html_safe
+    # Lógica de posição dos NPCS
+    dialogues = @scene.story.gsub("{pc_name}", current_user.narratives.first.pc_name)
+    @scene.npcs.each_with_index do |npc, index|
+      dialogues.gsub!("{npc#{index+1}}", npc.name)
+    end
+    @story = dialogues.split("{newline}")
   end
 
   def edit

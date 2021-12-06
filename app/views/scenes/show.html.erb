@@ -1,5 +1,7 @@
-<p class="mx-3 h3"><%= @story %></p>
-
+<div id="story_data" data-story="<%= @story.to_json%>"> </div>
+<% @story.each do |dialogue| %>
+<p class="mx-3 h3"><%= dialogue %></p>
+<% end  %>
 <% @scene.choices.each do |choice| %>
   <p class="mt-3"><%= link_to choice.action, scene_path(choice.next_scene), class: "btn btn-primary" %></p>
 <% end %>

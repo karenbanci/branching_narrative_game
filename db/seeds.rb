@@ -194,15 +194,15 @@ scene_17 = Scene.create!(
   story: %(
     ? "What do you think Barnabas?" {newline}
     The masked man speaks, his voice echoing from behind the metal: {newline}
-    {ncp1} "Sir Faelyn is dead. We have no captain." {newline}
+    {npc1} "Sir Faelyn is dead. We have no captain." {newline}
     The brute speaks up. {newline}
     ?: "We don't need one. Who cares if they call us a [Confraternity] or not? I care not who leads us, Valena. We should kill this weakling and hunt down the dwarf!" {newline}
     {npc2} "Even if we manage to uncover [Adrarth's Hoard], we would have no claim to it. We would be treated as little more than a band of thieves, Agronak." {newline}
-    {ncp1} "We would lack the legitamacy afforded by the [King]." {newline}
+    {npc1} "We would lack the legitamacy afforded by the [King]." {newline}
     {npc3} "And so you wish to ally with the men who killed Sir Faelyn?" {newline}
     {npc2} "I wish to recover the relics that were stolen from my people by that dragon. As did our late captain, need I remind you?" {newline}
     The man clad in the iron mask turns towards you. {newline}
-    {ncp1} "Speak. What say you?"
+    {npc1} "Speak. What say you?"
   )
 )
 
@@ -215,7 +215,7 @@ scene_18 = Scene.create!(
     {npc2} "This is foolish. Don't forget there is an armed dwarf sneaking about in these bushes." {newline}
     {npc3} "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
     {npc3} "Can you bind them to their word?" {newline}
-    Barnabas: "I shall render the vow magical, yet it must be uttered willingly."
+    {npc1}: "I shall render the vow magical, yet it must be uttered willingly."
   )
 )
 
@@ -436,6 +436,7 @@ Encounter.create!(scene: scene_14, npc: jorek)
 # scene 17
 Encounter.create!(scene: scene_17, npc: barnabas)
 Encounter.create!(scene: scene_17, npc: valena)
+Encounter.create!(scene: scene_17, npc: agronak)
 
 # scene 18
 Encounter.create!(scene: scene_18, npc: barnabas)
@@ -467,6 +468,9 @@ Encounter.create!(scene: scene_23, npc: barnabas)
 
 # scene 24
 Encounter.create!(scene: scene_24, npc: jorek)
+
+# scene 25
+Encounter.create!(scene: scene_25, npc: jorek)
 
 # scene 26
 Encounter.create!(scene: scene_26, npc: jorek)
