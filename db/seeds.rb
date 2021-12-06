@@ -88,7 +88,7 @@ scene_5 = Scene.create!(
   tale: tale_1,
   story: %(
     Another voice, this time that of a female, comes from your left. {newline}
-    ? “I assure you, [monkey], I ‘’never’' miss. That was a warning shot.” {newline}
+    ? “I assure you, [monkey], I never miss. That was a warning shot.” {newline}
     The first voice is heard again. Calm and assertive. {newline}
     ? “Should these thieves move a single muscle, do not hesitate to end their miserable lives, sister.“
   )
@@ -444,7 +444,7 @@ Choice.create!(action: "You and Jorek move towards the bodies of your fallen [co
 
 # scene 26
 Choice.create!(action: "Stay silent.", result: "", next_scene: scene_28, scene: scene_26)
-Choice.create!(action: "You bury your bodies to return them to the stone, you said? We burn ours, to return them to the Sun. The fire consumes the flesh, but also cleanses it, it is a ritual of purification.", result: "", next_scene: scene_27, scene: scene_25)
+Choice.create!(action: "You bury your bodies to return them to the stone, you said? We burn ours, to return them to the Sun. The fire consumes the flesh, but also cleanses it, it is a ritual of purification.", result: "", next_scene: scene_27, scene: scene_26)
 
 # scene 27
 Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_27)
