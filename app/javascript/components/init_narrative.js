@@ -3,16 +3,20 @@ const initNarrative = () => {
   if (storyElement) {
     const story = JSON.parse(storyElement.dataset.story);
     const actionsElement = document.getElementById('actions');
-    let storyIndex = parseInt(storyElement.dataset.storyIndex);
-    const storyBoard = document.getElementById('story-board');
-    storyBoard.innerText = story[storyIndex];
-    document.addEventListener("keydown", (event) => {
+    let storyIndex = 0
+    const storyLines = document.querySelectorAll('.story-line');
+    storyLines[storyIndex].classList.remove('d-none')
+
+    document.addEventListener("keyup", (event) => {
       if (event.code === "Enter" && storyIndex < story.length){
-        storyIndex++
-        storyBoard.innerText = story[storyIndex];
+        storyLines.forEach((storyLine) => {
+          storyLine.classList.add("d-none");
+        })
+        storyLines[storyIndex].classList.remove("d-none");
         if (storyIndex === story.length - 1){
           actionsElement.classList.remove("d-none");
         }
+        storyIndex++
       }
 
     })

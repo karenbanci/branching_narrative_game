@@ -1,10 +1,17 @@
+<div id="story-data" data-story="<%= @story.to_json %>" data-story-index="0">
 
-<div id="story-data" data-story="<%= @story.to_json%>" data-story-index="0">
-</div>
-<p id="story-board"></p>
+<div class="container mt-5">
+  <div class="dialogue">
 
-<div id="actions" class="d-none">
-<% @scene.choices.each do |choice| %>
-  <p class="mt-3"><%= link_to choice.action, scene_path(choice.next_scene), class: "btn btn-primary" %></p>
-<% end %>
+    <% @story.each do |dialogue| %>
+      <p class="mx-3 h3 story-line d-none"><%= dialogue.html_safe %></p>
+    <% end %>
+
+    <div id="actions" class="d-none">
+      <% @scene.choices.each do |choice| %>
+        <p class="mt-3"><%= link_to choice.action, scene_path(choice.next_scene), class: "btn btn-primary" %></p>
+      <% end %>
+    </div>
+
+  </div>
 </div>

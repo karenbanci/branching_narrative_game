@@ -261,7 +261,7 @@ scene_22 = Scene.create!(
     {npc1} "Captain? I... trust your better judgement. I hope we don't live to regret this" {newline}
     {npc2} "I will make sure you live to regret the murder of Sir Raelys, little one." {newline}
     {npc1} "Worry not, you oaf. I can send you to him whenever you wish me to." {newline}
-    {npc4} "I expect we shall depart at first light?"
+    {npc3} "I expect we shall depart at first light?"
   )
 )
 
@@ -505,7 +505,7 @@ Encounter.create!(scene: scene_19, npc: barnabas)
 Encounter.create!(scene: scene_19, npc: agronak)
 
 # scene 20
-Encounter.create!(scene: scene_19, npc: agronak)
+Encounter.create!(scene: scene_20, npc: agronak)
 
 # scene 21
 Encounter.create!(scene: scene_21, npc: valena)
