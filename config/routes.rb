@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   get "edit-profile", to: "pages#edit", as: :edit_profile
   get "map", to: "pages#map", as: :map
 
-  resources :scenes, only: [:show]
+
+  resources :tales, shallow: true do
+    resources :scenes
+  end
 end

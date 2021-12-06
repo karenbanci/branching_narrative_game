@@ -1,7 +1,56 @@
 class ScenesController < ApplicationController
+  before_action :set_scene, only: %i[show edit update destroy]
   def show
     @scene = Scene.find(params[:id])
     @story = @scene.story.gsub("{newline}", "<br>").html_safe
+  end
+
+  def edit
+    # authorize @scene
+  end
+
+  def new
+    @scene = Scene.new
+    @tale = Tale.find(params[:tale_id])
+    @scene.tale = @tale
+    # authorize @scene
+  end
+
+  def create
+    @scene = Scene.new(scene_params)
+    @tale = Tale.find(params[:tale_id])
+    @scene.tale = @tale
+    # authorize @scene
+    if @scene.save!
+      redirect_to scene_path(@scene)
+    else
+      redirect_to new_tale_scene_path(params[:tale_id])
+    end
+  end
+
+  def update
+    # authorize @scene
+    if @scene.update(scene_params)
+      redirect_to @scene, notice: "Your scene has been updated"
+    else
+      redirect_to edit_scene_path(@scene)
+    end
+  end
+
+  def destroy
+    # authorize @scene
+    @scene.destroy
+    redirect_to scenes_url, notice: "Your scene has been deleted"
+  end
+
+  private
+
+  def scene_params
+    params.require(:scene).permit(:story, :npc_position1, :npc_position2, :npc_position3)
+  end
+
+  def set_scene
+    @scene = Scene.find(params[:id])
   end
 end
 
