@@ -1,10 +1,12 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-12">
-      <h2>New scene for <%= @tale.name %> </h2>
+      <h3>Edit <%= @scene.tale.name %> </h3>
       <%= simple_form_for [@tale, @scene] do |f| %>
         <%= f.input :story, placeholder: "Write your story here", :as => :text, :input_html => { :rows => 7 } %>
         <%= f.submit class: "btn btn-danger" %>
+
+        <%= link_to "Back", @scene, class: "btn btn-danger"%>
       <% end %>
     </div>
   </div>

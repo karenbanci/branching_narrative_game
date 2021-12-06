@@ -1,8 +1,20 @@
-User.destroy_all
+# Encounter.destroy_all
+# Choice.destroy_all
+# Scene.destroy_all
+# Npc.destroy_all
+# Narrative.destroy_all
+# Tale.destroy_all
+# User.destroy_all
+
 #=============================================================================================================
 # USERS
 # =============================================================================================================
 user = User.create!(email: "test@test.com", password: "batata", username: "test")
+
+# =============================================================================================================
+# TALES
+# =============================================================================================================
+tale_1 = Tale.create!(name: "The Hoard of Adrarth", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", user: user)
 
 # =============================================================================================================
 # NARRATIVES
@@ -24,6 +36,7 @@ agronak = Npc.create!(name:"Agronak")
 # SCENES
 # =============================================================================================================
 scene_1 = Scene.create!(
+  tale: tale_1,
   npc_position1: "left",
   npc_position2: "right",
   story: %(
@@ -37,6 +50,7 @@ scene_1 = Scene.create!(
 )
 
 scene_2 = Scene.create!(
+  tale: tale_1,
   story: %(
     You and Halia grab your belongings and leave Ziraldo in the company of his bottle. {newline}
     {npc1} "Hopefully he can at least look after the horses in our absence." {newline}
@@ -47,6 +61,7 @@ scene_2 = Scene.create!(
 )
 
 scene_3 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "Cheers to that, capt'n! Stop worrying that pretty face of yours and sing us a song, will ya?" {newline}
     {npc2} "Sing one yourself, minstrel. The only song I'll ever sing will be your [requiem]." {newline}
@@ -58,6 +73,7 @@ scene_3 = Scene.create!(
 )
 
 scene_4 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "I meant about Jorek. God, I'm surrounded by fools." {newline}
     {npc2} "One of those fools is also handsome. Come by my tent tonight, dearest." {newline}
@@ -69,6 +85,7 @@ scene_4 = Scene.create!(
 )
 
 scene_5 = Scene.create!(
+  tale: tale_1,
   story: %(
     Another voice, this time that of a female, comes from your left. {newline}
     ? “I assure you, [monkey], I ‘’never’' miss. That was a warning shot.” {newline}
@@ -78,6 +95,7 @@ scene_5 = Scene.create!(
 )
 
 scene_6 = Scene.create!(
+  tale: tale_1,
   story: %(
     Silence rules over the glade for what feels like minutes. Tension hangs in the air. Finally, a male elf reveals himself and draws out his sword, as the familiar voice comes from his lips. {newline}
     {npc1} "I am Sir Raelys, captain of the "Last Legion". Trust me when I say: you are surrounded and my men have their sights trained on you. Now comply with my demands. I'll believe you are no threat once you are unarmed."
@@ -85,6 +103,7 @@ scene_6 = Scene.create!(
 )
 
 scene_7 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "You expect me to ''surrender''? To a [hare]?" {newline}
     {npc2} "Heed your captain, [monkey]!". {newline}
@@ -94,18 +113,21 @@ scene_7 = Scene.create!(
 )
 
 scene_8 = Scene.create!(
+  tale: tale_1,
   story: %(
     As soon as you give the order, Ziraldo draws his blade and darts towards the woods, and all hell breaks loose. Arrows start flying towards your camp, and one of them hits you square in the chest, knocking you down.
   )
 )
 
 scene_9 = Scene.create!(
+  tale: tale_1,
   story: %(
     ? "We are the children of the very forest you trespass upon. Now you have the option of leaving peacefully, or dying foolishly."
   )
 )
 
 scene_10 = Scene.create!(
+  tale: tale_1,
   story: %(
     ? "We overheard your conversation. We know you are after [Adrarth's Hoard]." {newline}
     {npc1} "No honor among thieves, then?" {newline}
@@ -117,12 +139,14 @@ scene_10 = Scene.create!(
 )
 
 scene_11 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "Many elves have been knighted since the [Aurea Act]. You can believe as you wish. I will you ask again: will you comply and lay down your arms?"
   )
 )
 
 scene_12 = Scene.create!(
+  tale: tale_1,
   story: %(
     As you finish uttering your words, the realization hits you: they will be your last. You look towards your left, from where the female voice was coming, and see, for a fraction of a second, the glint of an arrowhead. As it is loosened, you hear your companions shouting and drawing their wepons. {newline}
     You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can’t help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
@@ -131,12 +155,14 @@ scene_12 = Scene.create!(
 )
 
 scene_13 = Scene.create!(
+  tale: tale_1,
   story: %(
     You are dead.
   )
 )
 
 scene_14 = Scene.create!(
+  tale: tale_1,
   story: %(
     You hit your head on the ground and you feel your conscience fading. As it comes and goes, you catch only glimpses of the battle around you. {newline}
     A crimson flash lights up the entire forest, and as trees are engulfed by the hellish light you see the dead corpse of Halia, an arrow protruding from her back. {newline}
@@ -150,18 +176,21 @@ scene_14 = Scene.create!(
 )
 
 scene_15 = Scene.create!(
+  tale: tale_1,
   story: %(
     The elf's face turns somber. She looks to her right and speaks.
   )
 )
 
 scene_16 = Scene.create!(
+  tale: tale_1,
   story: %(
     The elf's face turns sour, and she grits her teeth. She looks to her right and speaks.
   )
 )
 
 scene_17 = Scene.create!(
+  tale: tale_1,
   story: %(
     ? "What do you think Barnabas?" {newline}
     The masked man speaks, his voice echoing from behind the metal: {newline}
@@ -178,6 +207,7 @@ scene_17 = Scene.create!(
 )
 
 scene_18 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "On the contrary: it is the most logical decision." {newline}
     {npc2} "I disagree. Why would we ask our prisoner to lead us? Let us chop off their head and be done with this." {newline}
@@ -190,6 +220,7 @@ scene_18 = Scene.create!(
 )
 
 scene_19 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "Your friend attacked us first. Sir Raelys asked you to surrender." {newline}
     {npc2} "The situation escalated." {newline}
@@ -202,6 +233,7 @@ scene_19 = Scene.create!(
 )
 
 scene_20 = Scene.create!(
+  tale: tale_1,
   story: %(
     The elf looks to her companions and sighs. She nods her head, and the barbarian lifts his greataxe, eager to end your life. As he is about to strike, Jorek jumps down from a tree, trying to land on the man's back. {newline}
     But before he reaches his target, Barnabas lifts his staff and holds the dwarf suspended midair. You see Valena draw her bow and nock an arrow, pointing it towards him. Before she can fire it, your hear the swing of the axe. {newline}
@@ -210,6 +242,7 @@ scene_20 = Scene.create!(
 )
 
 scene_21 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "Come out, dwarf. It seems we are all brothers and sisters now. [''Confrars'']." {newline}
     The elf says the last work mockinly. Still, Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
@@ -220,6 +253,7 @@ scene_21 = Scene.create!(
 )
 
 scene_22 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc1} "Captain? I... trust your better judgement. I hope we don't live to regret this" {newline}
@@ -231,6 +265,7 @@ scene_22 = Scene.create!(
 )
 
 scene_23 = Scene.create!(
+  tale: tale_1,
   story: %(
     As soon as the elf unties you, you reach for a knife in her belt, and stab her with it. As you give Jorek the order to attack, Agronak engages him in combat. You feel a stinging pain in your chest. {newline}
     {npc1} "Your vow was bound by magic. Once you break a magical oath, your heart stops beating." {newline}
@@ -239,12 +274,14 @@ scene_23 = Scene.create!(
 )
 
 scene_24 = Scene.create!(
+  tale: tale_1,
   story: %(
     As soon as you are untied, all of your new comrades start moving and complying with their assigned tasks. They seem to obey you, at the very least. But none of them trade words with you.
   )
 )
 
 scene_25 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "You have more faith than I do in the hearts of men, captain." {newline}
     Jorek moves towards you, keeping a watchful eye on your new companions. He grabs a knife and cuts your bindings. {newline}
@@ -254,6 +291,7 @@ scene_25 = Scene.create!(
 )
 
 scene_26 = Scene.create!(
+  tale: tale_1,
   story: %(
     {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I got their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't act sooner, cap
   )
