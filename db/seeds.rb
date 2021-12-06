@@ -443,15 +443,15 @@ Choice.create!(action: "You and Jorek move towards the bodies of your fallen [co
 Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_25)
 
 # scene 26
-Choice.create!(action: "Stay silent."., result: "", next_scene: scene_28, scene: scene_26)
+Choice.create!(action: "Stay silent.", result: "", next_scene: scene_28, scene: scene_26)
 Choice.create!(action: "You bury your bodies to return them to the stone, you said? We burn ours, to return them to the Sun. The fire consumes the flesh, but also cleanses it, it is a ritual of purification.", result: "", next_scene: scene_27, scene: scene_25)
 
 # scene 27
-Choice.create!(action: "Remain silent."., result: "", next_scene: scene_30, scene: scene_27)
+Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_27)
 Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_27)
 
 # scene 28
-Choice.create!(action: "Remain silent."., result: "", next_scene: scene_30, scene: scene_28)
+Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_28)
 Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_28)
 
 # =============================================================================================================
