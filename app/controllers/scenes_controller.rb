@@ -1,4 +1,9 @@
 class ScenesController < ApplicationController
+
+  def index
+    @scenes = Scene.all
+  end
+
   def show
     @scene = Scene.find(params[:id])
     @story = @scene.story.gsub("{newline}", "<br>").html_safe
