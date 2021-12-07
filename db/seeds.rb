@@ -35,12 +35,16 @@ agronak = Npc.create!(name:"Agronak")
 # =============================================================================================================
 # SCENES
 # =============================================================================================================
+scene_0 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    Welcome, {pc_name}, to the [Kingdom], a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
+  )
+)
+
 scene_1 = Scene.create!(
   tale: tale_1,
-  npc_position1: "left",
-  npc_position2: "right",
   story: %(
-    Welcome, {pc_name}, to a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
     {npc1} "Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     {npc2} "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
@@ -75,7 +79,7 @@ scene_3 = Scene.create!(
 scene_4 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "I meant about Jorek. God, I'm surrounded by fools." {newline}
+    {npc1} "I meant about Jorek. [God], I'm surrounded by fools." {newline}
     {npc2} "One of those fools is also handsome. Come by my tent tonight, dearest." {newline}
     {npc1} "I'll look for him by myself. As far away as possible from you." {newline}
     You observe as Halia gathers her belongings and Ziraldo takes another swig. As she stands up, however, you notice a rustling in the leaves to your left. As you look towards it, you see something coming out of some bushes. It looks like... an arrowtip! Before you can warn her you see the arrow being loosened. A moment passes, and you hear a thud. Halia lies on the ground before you, motionless. {newline}
@@ -296,7 +300,7 @@ scene_25 = Scene.create!(
 scene_26 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I got their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't find an opening sooner, captain." {newline}
+    {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I managed to get their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't find an opening sooner, captain." {newline}
     He starts dragging the bodies of Halia and Ziraldo, and arranges them neatly into a pile, surrounded by leaves, twigs, and firewood from the campfire. {newline}
     {npc1} "This is a weird custom of yours, if you don't mind me saying. Back in [Tuquoc] we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
     Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
@@ -344,6 +348,9 @@ scene_30 = Scene.create!(
 # =============================================================================================================
 # CHOICES
 # =============================================================================================================
+# scene 0
+Choice.create!(action: "Start your journey...", result: " ", next_scene: scene_1, scene: scene_0)
+
 # scene 1
 Choice.create!(action: "I think you should stop worrying. Jorek can take care of himself.", result: " ", next_scene: scene_3, scene: scene_1)
 Choice.create!(action: "I think the two of you deserve each other.", result: " ", next_scene: scene_4, scene: scene_1)
@@ -352,16 +359,16 @@ Choice.create!(action: "What do I think? I act. Let us search for him.", result:
 # scene 2
 Choice.create!(action: "You missed.", result: "", next_scene: scene_5, scene: scene_2)
 Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_2 )
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_2 )
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_2 )
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_2 )
 
 # scene 3
 Choice.create!(action: "Show yourselves! We mean no harm!", result: "", next_scene: scene_6, scene: scene_3)
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_3)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_3)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_3)
 
 # scene 4
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_4)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_4)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_4)
 
 # scene 5
@@ -370,7 +377,7 @@ Choice.create!(action: "You dare call us thieves?", result: "", next_scene: scen
 
 # scene 6
 Choice.create!(action: "Sir Raelys? You expect me to believe you a noble?", result: "", next_scene: scene_11, scene: scene_6 )
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same", result: { peace: 1 }, next_scene: scene_7, scene: scene_6)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same", result: { peace: 1 }, next_scene: scene_7, scene: scene_6)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_6)
 
 # scene 7
@@ -381,17 +388,17 @@ Choice.create!(action: "Chaos ensues.", result: "", next_scene: scene_14, scene:
 
 # scene 9
 Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_9)
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_9)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_9)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_9)
 
 # scene 10
 Choice.create!(action: "What Choices, ''hare''?", result: "", next_scene: scene_12, scene: scene_10 )
 Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_10)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_10 )
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_10 )
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_10 )
 
 # scene 11
-Choice.create!(action: "Lay down your arms, and instruct your [confrars] to do the same.", result: {peace: 1 }, next_scene: scene_7, scene: scene_11)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: {peace: 1 }, next_scene: scene_7, scene: scene_11)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_11)
 
 # scene 12
@@ -421,26 +428,26 @@ Choice.create!(action: "I am a Dead Man to the end. Do what you must.", result: 
 
 # scene 19
 Choice.create!(action: "I am a Dead Man to the end. Do what you must.", result: "", next_scene: scene_20, scene: scene_19)
-Choice.create!(action: "I... accept. I will lead The Last Legion. Jorek, stand down. From this moment forward these are our [confrars]...", result: "", next_scene: scene_22, scene: scene_19)
+Choice.create!(action: "I... accept. I will lead The Last Legion. Jorek, stand down. From this moment forward these are our confrars...", result: "", next_scene: scene_22, scene: scene_19)
 
 # scene 20
 Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_20)
 
 # scene 21
-Choice.create!(action: "Untie me, I command all of you! Elf, you are on watch tonight. Mage, dispose of the body of your former captain as you see fit. And you, brute, stay out of my way. Jorek, come with me, we shall cremate our comrades in accordance with the word of [God]", result: "", next_scene: scene_24, scene: scene_21)
+Choice.create!(action: "Untie me, I command all of you! Elf, you are on watch tonight. Mage, dispose of the body of your former captain as you see fit. And you, brute, stay out of my way. Jorek, come with me, we must cremate our confrars.", result: "", next_scene: scene_24, scene: scene_21)
 Choice.create!(action: "Untie me, I command all of you! Jorek, draw your blades and help me to slay these murderers!", result: "", next_scene: scene_23, scene: scene_21)
 
 # scene 22
-Choice.create!(action: "We depart at first light. One of you should set up watch. The others should dispose of Sir Raelys' body according to elven tradition. We shall do the same for our fallen [confrars] according to the word of [God].", result: {}, next_scene: scene_25, scene: scene_22)
+Choice.create!(action: "We depart at first light. One of you should set up watch. The others should dispose of Sir Raelys' body according to elven tradition. We shall do the same for our fallen confrars according to our customs.", result: {}, next_scene: scene_25, scene: scene_22)
 
 # scene 23
 Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_23)
 
 # scene 24
-Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_24)
+Choice.create!(action: "You and Jorek move towards the bodies of your fallen companions.", result: "", next_scene: scene_26, scene: scene_24)
 
 # scene 25
-Choice.create!(action: "You and Jorek move towards the bodies of your fallen [confrars].", result: "", next_scene: scene_26, scene: scene_25)
+Choice.create!(action: "You and Jorek move towards the bodies of your fallen companions.", result: "", next_scene: scene_26, scene: scene_25)
 
 # scene 26
 Choice.create!(action: "Stay silent.", result: "", next_scene: scene_28, scene: scene_26)
@@ -448,11 +455,11 @@ Choice.create!(action: "You bury your bodies to return them to the stone, you sa
 
 # scene 27
 Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_27)
-Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_27)
+Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of God. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_27)
 
 # scene 28
 Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_28)
-Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of [God]. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_28)
+Choice.create!(action: "There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of God. The hardships of life are endured by the living. And so, we must remain in our struggle.", result: "", next_scene: scene_29, scene: scene_28)
 
 # =============================================================================================================
 # ENCOUNTER
