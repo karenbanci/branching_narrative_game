@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
 
   resources :tales, shallow: true do
-    resources :scenes
+    resources :scenes do
+      resources :choices
+    end
   end
+
 end
