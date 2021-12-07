@@ -25,7 +25,7 @@
       <tr>
         <th><%= link_to tale.name, scene_path(1) %></th>
         <td><%= tale.description.truncate(50) %></td>
-        <td><%=link_to "Edit Story", edit_tale_path(tale)   %></td>
+        <td><%=link_to "Edit Description", edit_tale_path(tale)   %></td>
         <td><%=link_to "Edit Scenes", tale_path(tale)   %></td>
       </tr>
   <% end %>
