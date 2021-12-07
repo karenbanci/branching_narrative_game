@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_210816) do
+ActiveRecord::Schema.define(version: 2021_12_07_142853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_210816) do
     t.bigint "scene_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "npc_position", default: "left"
     t.index ["npc_id"], name: "index_encounters_on_npc_id"
     t.index ["scene_id"], name: "index_encounters_on_scene_id"
   end
@@ -88,9 +89,6 @@ ActiveRecord::Schema.define(version: 2021_12_06_210816) do
 
   create_table "scenes", force: :cascade do |t|
     t.text "story"
-    t.string "npc_position1", default: "left", null: false
-    t.string "npc_position2", default: "right", null: false
-    t.string "npc_position3", default: "center", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "tale_id", null: false
