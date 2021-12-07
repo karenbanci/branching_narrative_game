@@ -241,7 +241,7 @@ scene_18 = Scene.create!(
     {npc2} "This is foolish. Don't forget there is an armed dwarf sneaking about in these bushes." {newline}
     {npc3} "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
     {npc3} "Can you bind them to their word?" {newline}
-    {npc1}: "I shall render the vow magical, yet it must be uttered willingly."
+    {npc1} "I shall render the vow magical, yet it must be uttered willingly."
   )
 )
 
