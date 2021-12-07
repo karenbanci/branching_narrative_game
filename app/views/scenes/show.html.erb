@@ -2,18 +2,28 @@
 
 <div class="background" style="background-image: url(<%= cl_image_path @scene.background.key, crop: :fill if @scene.background.attached? %>)">
   <div class="show-stories">
+    <div class="navbar-game">
+    <%= link_to "Back", scene_path(@scene), class: "exit-navbar-game btn btn-success" %>
+    <%= link_to "Exit", tales_path, class: "exit-navbar-game btn btn-success"%>
+    </div>
     <div class="container box-dialog">
 
       <%# Display de dialogo %>
-      <% @story.each_with_index do |dialogue, index| %>
-          <p class="story-line <%= "d-none" unless index == 0 %>"><%= dialogue.html_safe %></p>
+      <div id="dialogue">
+        <% @story.each_with_index do |dialogue, index| %>
+          <p class="story-line <%= "d-none" unless index.zero? %>"><%= dialogue.html_safe %></p>
         <% end %>
+      </div>
       <%# Display dos personagens %>
-      <% @scene.npcs.each do |npc|  %>
-        <%= cl_image_tag npc.photo.key, crop: :fill if npc.photo.attached? %>
-      <% end %>
+
+        <% @scene.encounters.each do |encounter| %>
+        <div class="character <%= encounter.npc_position %> ">
+          <%= cl_image_tag encounter.npc.photo.key, crop: :fill if encounter.npc.photo.attached? %>
+          </div>
+        <% end %>
+
       <%# Display das escolhas %>
-      <div id="actions" class="d-none">
+      <div id="actions" class="d-none mt-3">
         <% @scene.choices.each do |choice| %>
           <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-success" %></p>
         <% end %>
