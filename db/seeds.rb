@@ -9,7 +9,7 @@
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "test@test.com", password: "batata", username: "test")
+user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin")
 
 # =============================================================================================================
 # TALES
@@ -24,13 +24,34 @@ narrative = Narrative.create!(user: user)
 # =============================================================================================================
 # NPCS
 # =============================================================================================================
-halia = Npc.create!(name:"Halia")
-ziraldo = Npc.create!(name:"Ziraldo")
-sir_raelys = Npc.create!(name:"Sir Raelys")
-jorek = Npc.create!(name:"Jorek")
-barnabas = Npc.create!(name:"Barnabas")
-valena = Npc.create!(name:"Valena")
-agronak = Npc.create!(name:"Agronak")
+
+# halia
+halia = Npc.create!(name: "Halia")
+halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
+
+# ziraldo
+ziraldo = Npc.create!(name: "Ziraldo")
+ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/ziraldo.png"), content_type: "image/png", filename: ziraldo.name)
+
+# jorek
+jorek = Npc.create!(name: "Jorek")
+jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/jorek.png"), content_type: "image/png", filename: jorek.name)
+
+# sir raelys
+sir_raelys = Npc.create!(name: "Sir Raelys")
+sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/sir_raelys.png"), content_type: "image/png", filename: sir_raelys.name)
+
+# valena
+valena = Npc.create!(name: "Valena")
+valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
+
+# agronak
+agronak = Npc.create!(name: "Agronak")
+agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/agronak.png"), content_type: "image/png", filename: agronak.name)
+
+# barnabas
+barnabas = Npc.create!(name: "Barnabas")
+barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/barnabas.png"), content_type: "image/png", filename: barnabas.name)
 
 # =============================================================================================================
 # SCENES
@@ -348,6 +369,7 @@ scene_30 = Scene.create!(
 # =============================================================================================================
 # CHOICES
 # =============================================================================================================
+
 # scene 0
 Choice.create!(action: "Start your journey...", result: " ", next_scene: scene_1, scene: scene_0)
 
@@ -466,7 +488,7 @@ Choice.create!(action: "There is no need to mourn the dead. Their flesh is consu
 # =============================================================================================================
 # scene 1
 Encounter.create!(scene: scene_1, npc: halia)
-Encounter.create!(scene: scene_1, npc: ziraldo)
+Encounter.create!(scene: scene_1, npc: ziraldo, npc_position: "right")
 
 # scene 2
 Encounter.create!(scene: scene_2, npc: halia)
