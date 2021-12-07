@@ -14,8 +14,8 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
   </head>
 
-  <body class="bg-dark">
-    <% unless current_page?(root_path)  %>
+  <body class="bg-dark <%= "no-margin" if request.path.match?(/scenes\/\d/) %>">
+    <% unless current_page?(root_path) || request.path.match?(/scenes\/\d/) %>
       <%= render 'shared/navbar' %>
     <% end %>
       <%= render 'shared/flashes' %>
