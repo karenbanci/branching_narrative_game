@@ -3,10 +3,11 @@
 <div class="background" style="background-image: url(<%= cl_image_path @scene.background.key, crop: :fill if @scene.background.attached? %>)">
   <div class="show-stories">
     <div class="container mt-5">
+
       <%# Display de dialogo %>
-      <% @story.each do |dialogue| %>
-        <p class="mx-3 h3 story-line d-none"><%= dialogue.html_safe %></p>
-      <% end %>
+      <% @story.each_with_index do |dialogue, index| %>
+          <p class="mx-3 h3 story-line <%= "d-none" unless index == 0 %>"><%= dialogue.html_safe %></p>
+        <% end %>
       <%# Display dos personagens %>
       <% @scene.npcs.each do |npc|  %>
         <%= cl_image_tag npc.photo.key, crop: :fill if npc.photo.attached? %>
