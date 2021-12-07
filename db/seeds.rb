@@ -65,6 +65,8 @@ scene_0 = Scene.create!(
     Welcome, {pc_name}, to the [Kingdom], a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
   )
 )
+background = URI.open(background_url)
+scene_0.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_1 = Scene.create!(
   tale: tale_1,
