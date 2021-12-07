@@ -4,19 +4,20 @@
   <div class="show-stories">
     <div class="container box-dialog">
 
-
-        <% @story.each do |dialogue| %>
-          <div id="dialogue">
-            <p class="story-line d-none"><%= dialogue.html_safe %></p>
-          </div>
+      <%# Display de dialogo %>
+      <% @story.each_with_index do |dialogue, index| %>
+          <p class="story-line <%= "d-none" unless index == 0 %>"><%= dialogue.html_safe %></p>
         <% end %>
-
-        <div id="actions" class="d-none">
-          <% @scene.choices.each do |choice| %>
-            <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-success" %></p>
-          <% end %>
-        </div>
-
+      <%# Display dos personagens %>
+      <% @scene.npcs.each do |npc|  %>
+        <%= cl_image_tag npc.photo.key, crop: :fill if npc.photo.attached? %>
+      <% end %>
+      <%# Display das escolhas %>
+      <div id="actions" class="d-none">
+        <% @scene.choices.each do |choice| %>
+          <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-success" %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
