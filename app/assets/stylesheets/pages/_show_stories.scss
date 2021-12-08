@@ -93,16 +93,12 @@
   color: $gold;
 }
 
-#ModalCharacters {
-  opacity: 0.8;
+.modal-header {
+  background-color: $dialogue-grey;
 }
 
-#ModalMap {
-  opacity: 0.8;
-}
-
-#ModalStory {
-  opacity: 0.8;;
+.modal-body {
+  background-color: $dialogue-grey;
 }
 
 #Jorek {

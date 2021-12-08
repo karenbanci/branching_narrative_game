@@ -63,11 +63,11 @@ barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/u
 scene_1 = Scene.create!(
   tale: tale_1,
   story: %(
-    Welcome, {pc_name}, to the [Kingdom], a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
+    Welcome, {pc_name}, to the Kingdom, a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a Confraternity called 'The Dead Men'. You and your companions are on a months long journey on the trail of Ardrath's Hoard. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
     {npc1} "Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     {npc2} "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
-    {npc2} "Hah! I'd like to see you try. I doubt you can use those knives of yours in a fight, instead of sneaking up on your foe. Why didn't you go scouting tonight, anyways? Scared of the [Elgenwode], are we?" {newline}
+    {npc2} "Hah! I'd like to see you try. I doubt you can use those knives of yours in a fight, instead of sneaking up on your foe. Why didn't you go scouting tonight, anyways? Scared of the Elgenwode, are we?" {newline}
     {npc1} "I refuse to argue with a vagabond. What do you think, captain?"
   )
 )
@@ -102,7 +102,7 @@ scene_3.background.attach(io: background, filename: "background", content_type: 
 scene_4 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "I meant about Jorek. [God], I'm surrounded by fools." {newline}
+    {npc1} "I meant about Jorek. God, I'm surrounded by fools." {newline}
     {npc2} "One of those fools is also handsome. Come by my tent tonight, dearest." {newline}
     {npc1} "I'll look for him by myself. As far away as possible from you." {newline}
     You observe as Halia gathers her belongings and Ziraldo takes another swig. As she stands up, however, you notice a rustling in the leaves to your left. As you look towards it, you see something coming out of some bushes. It looks like... an arrowtip! Before you can warn her you see the arrow being loosened. A moment passes, and you hear a thud. Halia lies on the ground before you, motionless. {newline}
@@ -117,7 +117,7 @@ scene_5 = Scene.create!(
   tale: tale_1,
   story: %(
     Another voice, this time that of a female, comes from your left. {newline}
-    ? “I assure you, [monkey], I never miss. That was a warning shot.” {newline}
+    ? “I assure you, monkey, I never miss. That was a warning shot.” {newline}
     The first voice is heard again. Calm and assertive. {newline}
     ? “Should these thieves move a single muscle, do not hesitate to end their miserable lives, sister.“
   )
@@ -138,8 +138,8 @@ scene_6.background.attach(io: background, filename: "background", content_type: 
 scene_7 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "You expect me to ''surrender''? To a [hare]?" {newline}
-    {npc2} "Heed your captain, [monkey]!". {newline}
+    {npc1} "You expect me to ''surrender''? To a hare?" {newline}
+    {npc2} "Heed your captain, monkey!". {newline}
     {npc1} "I'll do no such thing! I will not yield! ''I bow to no one!''" {newline}
     Before you can admonish the drunken lout for his insubordination, he draws his blade and rushes towards the woods, and all hell breaks loose. Arrows start flying towards your camp, and one of them hits you square in the chest, knocking you down.
   )
@@ -169,10 +169,10 @@ scene_9.background.attach(io: background, filename: "background", content_type: 
 scene_10 = Scene.create!(
   tale: tale_1,
   story: %(
-    ? "We overheard your conversation. We know you are after [Ardrath's Hoard]." {newline}
+    ? "We overheard your conversation. We know you are after Ardrath's Hoard." {newline}
     {npc1} "No honor among thieves, then?" {newline}
     ? "The treasure is mine by ''right'', human." {newline}
-    {npc2} "Unless we get to it first, [hare]." {newline}
+    {npc2} "Unless we get to it first, hare." {newline}
     The calm voice from before takes a furious tone after hearing the insult. {newline}
     ? "Control your lackeys! I will repeat myself: lay down your arms or suffer the consequences!"
   )
@@ -183,7 +183,7 @@ scene_10.background.attach(io: background, filename: "background", content_type:
 scene_11 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "Many elves have been knighted since the [Aurea Act]. You can believe as you wish, it matters little to me. I will you ask again: will you comply and lay down your arms?"
+    {npc1} "Many elves have been knighted since the Aurea Act. You can believe as you wish, it matters little to me. I will you ask again: will you comply and lay down your arms?"
   )
 )
 background = URI.open(background_url)
@@ -250,9 +250,9 @@ scene_17 = Scene.create!(
     The masked man speaks, his voice echoing from behind the metal: {newline}
     {npc1} "Sir Faelyn is dead. We have no captain." {newline}
     The brute speaks up. {newline}
-    ?: "We don't need one. Who cares if they call us a [Confraternity] or not? I care not who leads us, Valena. We should kill this weakling and hunt down the dwarf!" {newline}
-    {npc2} "Even if we manage to uncover [Ardrath's Hoard], we would have no claim to it. We would be treated as little more than a band of thieves, Agronak." {newline}
-    {npc1} "We would lack the legitamacy afforded by the [King]." {newline}
+    ?: "We don't need one. Who cares if they call us a Confraternity or not? I care not who leads us, Valena. We should kill this weakling and hunt down the dwarf!" {newline}
+    {npc2} "Even if we manage to uncover Ardrath's Hoard, we would have no claim to it. We would be treated as little more than a band of thieves, Agronak." {newline}
+    {npc1} "We would lack the legitamacy afforded by the King." {newline}
     {npc3} "And so you wish to ally with the men who killed Sir Faelyn?" {newline}
     {npc2} "I wish to recover the relics that were stolen from my people by that dragon. As did our late captain, need I remind you?" {newline}
     The man clad in the iron mask turns towards you. {newline}
@@ -267,7 +267,7 @@ scene_18 = Scene.create!(
   story: %(
     {npc1} "On the contrary: it is the most logical decision." {newline}
     {npc2} "I disagree. Why would we ask our prisoner to lead us? Let us chop off their head and be done with this." {newline}
-    {npc3} "And go back? Or go through with the quest and risk antagonizing the [Kingdom]? Consider our proposal, [monkey]. {newline} We all stand to gain from it." {newline}
+    {npc3} "And go back? Or go through with the quest and risk antagonizing the Kingdom? Consider our proposal, monkey. {newline} We all stand to gain from it." {newline}
     {npc2} "This is foolish. Don't forget there is an armed dwarf sneaking about in these bushes." {newline}
     {npc3} "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
     {npc3} "Can you bind them to their word?" {newline}
@@ -307,7 +307,7 @@ scene_20.background.attach(io: background, filename: "background", content_type:
 scene_21 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "Come out, dwarf. It seems we are all brothers and sisters now. [Confrars]." {newline}
+    {npc1} "Come out, dwarf. It seems we are all brothers and sisters now. Confrars." {newline}
     The elf says the last work mockinly. Still, Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc2} "Captain? I cannot believe this..." {newline}
     {npc3} "I expect we shall depart at first light?"
@@ -368,7 +368,7 @@ scene_26 = Scene.create!(
   story: %(
     {npc1} "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I managed to get their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't find an opening sooner, captain." {newline}
     He starts dragging the bodies of Halia and Ziraldo, and arranges them neatly into a pile, surrounded by leaves, twigs, and firewood from the campfire. {newline}
-    {npc1} "This is a weird custom of yours, if you don't mind me saying. Back in [Tuquoc] we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
+    {npc1} "This is a weird custom of yours, if you don't mind me saying. Back in Tuquoc we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
     Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
   )
 )
@@ -398,9 +398,9 @@ scene_28.background.attach(io: background, filename: "background", content_type:
 scene_29 = Scene.create!(
   tale: tale_1,
   story: %(
-    {npc1} "And what a struggle it will be. Slaying a dragon... I hope we are up to the task. Rest, my [confrars]." {newline}
+    {npc1} "And what a struggle it will be. Slaying a dragon... I hope we are up to the task. Rest, my confrars." {newline}
     Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
-    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards [Ardrath's Hoard]. {newline}
+    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards Ardrath's Hoard. {newline}
     End of Act I...
   )
 )
@@ -412,7 +412,7 @@ scene_30 = Scene.create!(
   story: %(
     Jorek takes your cue and remains silent as well, wathcing as the bodies burn in front of him. {newline}
     Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
-    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards [Ardrath's Hoard]. {newline}
+    Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards Ardrath's Hoard. {newline}
     End of Act I...
   )
 )
@@ -573,8 +573,8 @@ Encounter.create!(scene: scene_11, npc: sir_raelys, npc_position: "left")
 Encounter.create!(scene: scene_14, npc: jorek, npc_position: "left")
 
 # scene 17
-Encounter.create!(scene: scene_17, npc: barnabas, npc_position: "left")
 Encounter.create!(scene: scene_17, npc: valena, npc_position: "right")
+Encounter.create!(scene: scene_17, npc: barnabas, npc_position: "left")
 Encounter.create!(scene: scene_17, npc: agronak, npc_position: "middle")
 
 # scene 18
@@ -625,24 +625,24 @@ Encounter.create!(scene: scene_30, npc: jorek, npc_position: "left")
 # POPUPS
 # =============================================================================================================
 
-Popup.create!(name: "[Confraternity]", description: "A band of brothers and sisters led by member of the nobility gathered together for a common cause." )
+Popup.create!(name: "Confraternity", description: "A band of brothers and sisters led by member of the nobility gathered together for a common cause." )
 
-Popup.create!(name: "[Ardrath's Hoard]", description: "A legendary treasure stolen from elvish lands rumored to be guarded by Ardrath, one of the last living dragons." )
+Popup.create!(name: "Ardrath's Hoard", description: "A legendary treasure stolen from elvish lands rumored to be guarded by Ardrath, one of the last living dragons." )
 
-Popup.create!(name: "[Elgenwode]", description: "A vast span of untamed wilderness to which the elves were banished in ages long past." )
+Popup.create!(name: "Elgenwode", description: "A vast span of untamed wilderness to which the elves were banished in ages long past." )
 
-Popup.create!(name: "[monkey]", description: "A derogatory term used to describe humans, due to their bearded faces and hairy bodies, similar to apes." )
+Popup.create!(name: "monkey", description: "A derogatory term used to describe humans, due to their bearded faces and hairy bodies, similar to apes." )
 
-Popup.create!(name: "[hare]", description: "A derogatory term used to describe elves, due to their long and pointed ears, similar to rabbits." )
+Popup.create!(name: "hare", description: "A derogatory term used to describe elves, due to their long and pointed ears, similar to rabbits." )
 
-Popup.create!(name: "[Aurea Act]", description: "An incredibly recent development in human-elvish relations, the Aurea Act freed all elves from slavery and allowed them to become knights." )
+Popup.create!(name: "Aurea Act", description: "An incredibly recent development in human-elvish relations, the Aurea Act freed all elves from slavery and allowed them to become knights." )
 
-Popup.create!(name: "[King]", description: "King Edmon, the half-elven bastard child of the late King Omen, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
+Popup.create!(name: "King", description: "King Edmon, the half-elven bastard child of the late King Omen, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
 
-Popup.create!(name: "[Kingdom]", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
+Popup.create!(name: "Kingdom", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
 
-Popup.create!(name: "[Confrars]", description: "A caring term used by members of a Confraternity to address one another, similar to being called a sibling.")
+Popup.create!(name: "Confrars", description: "A caring term used by members of a Confraternity to address one another, similar to being called a sibling.")
 
-Popup.create!(name: "[Tuquoc]", description: "The capital city of the Kingdom of the Dwarves, located far away in the west, under the mountains and past the great ocean.")
+Popup.create!(name: "Tuquoc", description: "The capital city of the Kingdom of the Dwarves, located far away in the west, under the mountains and past the great ocean.")
 
-Popup.create!(name: "[God]", description: "The official religion of the human Kingdom is defined by the Church, which holds that the Sun is the personification of God, and the sacred gift of life is derived from it.")
+Popup.create!(name: "God", description: "The official religion of the human Kingdom is defined by the Church, which holds that the Sun is the personification of God, and the sacred gift of life is derived from it.")
