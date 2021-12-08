@@ -18,6 +18,13 @@
 
       <%= link_to "Exit", index_path, class: "exit-navbar-game btn btn-dark"%>
     </div>
+      <%# Display dos personagens %>
+      <% @scene.encounters.each do |encounter| %>
+      <div class="character <%= encounter.npc_position %> ">
+        <%= cl_image_tag encounter.npc.photo.key, crop: :fill, id: encounter.npc.name if encounter.npc.photo.attached? %>
+        </div>
+      <% end %>
+
     <div class="container box-dialog">
 
       <%# Display de dialogo %>
@@ -27,12 +34,6 @@
         <% end %>
       </div>
 
-      <%# Display dos personagens %>
-      <% @scene.encounters.each do |encounter| %>
-      <div class="character <%= encounter.npc_position %> ">
-        <%= cl_image_tag encounter.npc.photo.key, crop: :fill, id: encounter.npc.name if encounter.npc.photo.attached? %>
-        </div>
-      <% end %>
 
       <%# Display das escolhas %>
       <div id="actions" class="d-none mt-3">
@@ -77,42 +78,42 @@
           <%# CARD 1 %>
           <div class="card-character card-1">
             <div class="image-character border border-danger">
-              <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/halia-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/halia-card.png") %>
             </div>
             <div class="title">Halia</div>
           </div>
           <%# CARD 2 %>
           <div class="card-character card-2">
             <div class="image-character border border-danger">
-              <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/ziraldo-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/ziraldo-card.png") %>
             </div>
             <div class="title">Ziraldo</div>
           </div>
           <%# CARD 3 %>
           <div class="card-character card-3">
             <div class="image-character border border-danger">
-              <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/jorek-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/jorek-card.png") %>
             </div>
             <div class="title">Jorek</div>
           </div>
           <%# CARD 4 %>
           <div class="card-character card-4">
             <div class="image-character border border-danger">
-              <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/valena-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638987142/The%20Hoard%20of%20Adrarth/characters-card/valena-card.png") %>
             </div>
             <div class="title">Valena</div>
           </div>
           <%# CARD 5 %>
           <div class="card-character card-5">
             <div class="image-character border border-danger">
-              <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/agronak-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/agronak-card.png") %>
             </div>
             <div class="title">Agronak</div>
           </div>
           <%# CARD 6 %>
           <div class="card-character card-6">
             <div class="image-character border border-danger">
-              <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/barnabas-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/barnabas-card.png") %>
             </div>
             <div class="title">Barnabas</div>
           </div>
@@ -135,7 +136,7 @@
       </div>
       <div class="modal-body">
         <p>
-          <%= cl_image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638804940/The%20Hoard%20of%20Adrarth/map.jpg", size: "800x800", class: "border border-danger") %>
+          <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638804940/The%20Hoard%20of%20Adrarth/map.jpg", size: "800x800", class: "border border-danger") %>
         </p>
       </div>
     </div>
