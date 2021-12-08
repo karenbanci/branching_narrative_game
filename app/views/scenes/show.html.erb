@@ -21,10 +21,11 @@
     <div class="container box-dialog">
 
       <%# Display de dialogo %>
-      <div id="dialogue">
+      <div class="dialogue">
         <% @story.each_with_index do |dialogue, index| %>
           <p class="story-line <%= "d-none" unless index.zero? %>"><%= dialogue.html_safe %></p>
         <% end %>
+        <i class="arrow floating fas fa-caret-down"></i>
       </div>
 
       <%# Display dos personagens %>

@@ -7,7 +7,7 @@ class ScenesController < ApplicationController
     # Lógica de popups
     story = @scene.story
     Popup.all.each do |popup|
-      story.gsub!(popup.name, "<span data-bs-toggle='popover' data-bs-trigger='hover focus' data-bs-content='#{popup.description}'>#{popup.name} </span>")
+      story.gsub!(popup.name, "<span class='popup' data-bs-toggle='popover' data-bs-trigger='hover focus' data-bs-content=' #{popup.description}'>#{popup.name} </span>")
     end
 
     # Lógica de posição dos NPCS
