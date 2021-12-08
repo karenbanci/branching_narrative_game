@@ -12,7 +12,7 @@ background_url = "https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802000/
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin")
+user = User.create!(email: "admin@admin.com", password: "batata", username: "Admin")
 
 # =============================================================================================================
 # TALES
@@ -30,31 +30,31 @@ narrative = Narrative.create!(user: user)
 
 # halia
 halia = Npc.create!(name: "Halia")
-halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
+halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
 
 # ziraldo
 ziraldo = Npc.create!(name: "Ziraldo")
-ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/ziraldo.png"), content_type: "image/png", filename: ziraldo.name)
+ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/ziraldo.png"), content_type: "image/png", filename: ziraldo.name)
 
 # jorek
 jorek = Npc.create!(name: "Jorek")
-jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/jorek.png"), content_type: "image/png", filename: jorek.name)
+jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/jorek.png"), content_type: "image/png", filename: jorek.name)
 
 # sir raelys
 sir_raelys = Npc.create!(name: "Sir Raelys")
-sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/sir_raelys.png"), content_type: "image/png", filename: sir_raelys.name)
+sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973950/The%20Hoard%20of%20Adrarth/characters-game/raelys.png"), content_type: "image/png", filename: sir_raelys.name)
 
 # valena
 valena = Npc.create!(name: "Valena")
-valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
+valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638976455/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
 
 # agronak
 agronak = Npc.create!(name: "Agronak")
-agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/agronak.png"), content_type: "image/png", filename: agronak.name)
+agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/agronak.png"), content_type: "image/png", filename: agronak.name)
 
 # barnabas
 barnabas = Npc.create!(name: "Barnabas")
-barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/barnabas.png"), content_type: "image/png", filename: barnabas.name)
+barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/barnabas.png"), content_type: "image/png", filename: barnabas.name)
 
 # =============================================================================================================
 # SCENES

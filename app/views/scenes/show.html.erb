@@ -3,7 +3,8 @@
 <div class="background" style="background-image: url(<%= cl_image_path @scene.background.key, crop: :fill if @scene.background.attached? %>)">
   <div class="show-stories">
     <div class="navbar-game">
-    <%= link_to "Exit", tales_path, class: "exit-navbar-game btn btn-success"%>
+      <%= link_to "About", about_path, target: '_blank', class: "exit-navbar-game btn btn-success" %>
+      <%= link_to "Exit", index_path, class: "exit-navbar-game btn btn-success"%>
     </div>
     <div class="container box-dialog">
 
