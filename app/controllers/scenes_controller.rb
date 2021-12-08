@@ -56,7 +56,7 @@ class ScenesController < ApplicationController
   private
 
   def scene_params
-    params.require(:scene).permit(:story, :npc_position1, :npc_position2, :npc_position3, :background)
+    params.require(:scene).permit(:story, :background)
   end
 
   def set_scene
