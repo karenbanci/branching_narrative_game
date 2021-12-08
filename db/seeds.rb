@@ -12,7 +12,7 @@ background_url = "https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802000/
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin")
+user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin", admin: true)
 
 # =============================================================================================================
 # TALES
@@ -42,7 +42,7 @@ jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/uplo
 
 # sir raelys
 sir_raelys = Npc.create!(name: "Sir Raelys")
-sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/sir_raelys.png"), content_type: "image/png", filename: sir_raelys.name)
+# sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/sir_raelys.png"), content_type: "image/png", filename: sir_raelys.name)
 
 # valena
 valena = Npc.create!(name: "Valena")
