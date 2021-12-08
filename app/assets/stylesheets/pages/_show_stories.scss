@@ -15,15 +15,15 @@
 .character {
   height: 90vh;
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   z-index: 0;
 
   &.left {
-    left: 20px;
+    left: 30px;
   }
 
   &.right {
-    right: 20px;
+    right: 30px;
   }
 
   &.middle {
