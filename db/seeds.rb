@@ -46,7 +46,7 @@ sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image
 
 # valena
 valena = Npc.create!(name: "Valena")
-valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638978145/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
+valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638986920/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
 
 # agronak
 agronak = Npc.create!(name: "Agronak")

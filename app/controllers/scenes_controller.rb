@@ -1,12 +1,15 @@
 class ScenesController < ApplicationController
   before_action :set_scene, only: %i[show edit update destroy]
   def show
+    Narrative.create(user: current_user) if current_user.narratives.first.nil?
     @scene = Scene.find(params[:id])
+
     # Lógica de popups
     story = @scene.story
     Popup.all.each do |popup|
       story.gsub!(popup.name, "<span class='popup' data-bs-toggle='popover' data-bs-trigger='hover focus' data-bs-content=' #{popup.description}'>#{popup.name} </span>")
     end
+
     # Lógica de posição dos NPCS
     dialogues = @scene.story.gsub("{pc_name}", current_user.narratives.first.pc_name)
     @scene.npcs.each_with_index do |npc, index|
@@ -63,5 +66,3 @@ class ScenesController < ApplicationController
     @scene = Scene.find(params[:id])
   end
 end
-
-# @story = @scene.story.gsub("{pc_name}", narrative.pc_name).gsub("{npc1}", @scene.npcs[0].name).gsub("{npc2}", @scene.npcs[1].name).gsub("{npc3}", @scene.npcs[2].name).split("{newline}")
