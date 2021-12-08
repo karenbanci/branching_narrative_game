@@ -12,7 +12,7 @@ background_url = "https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802000/
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "admin@admin.com", password: "batata", username: "Admin")
+user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin", admin: true)
 
 # =============================================================================================================
 # TALES
