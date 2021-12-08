@@ -25,7 +25,7 @@ h2 {
   justify-content: space-between;
   margin-bottom: 10px;
   align-self: center;
-  background-color: black;
+  background-color: $dialogue-grey;
   height: 300px;
   width: 100%;
   overflow: hidden;
@@ -39,7 +39,6 @@ h2 {
 }
 
 .card-character:hover .image-character img {
-  opacity: 0.6;
   transform: scale(1.1);
 }
 
