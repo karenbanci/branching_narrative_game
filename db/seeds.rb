@@ -69,7 +69,7 @@ scene_1 = Scene.create!(
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
     {npc2} "Hah! I'd like to see you try. I doubt you can use those knives of yours in a fight, instead of sneaking up on your foe. Why didn't you go scouting tonight, anyways? Scared of the Elgenwode, are we?" {newline}
     {npc1} "I refuse to argue with a vagabond. What do you think, captain?"
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_1.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -82,7 +82,7 @@ scene_2 = Scene.create!(
     Before you can leave, however, you feel the wind being cut next to your cheeks, accompanied by a hissing sound. There's no mistaking it: the flight of an arrow. {newline}
     ? "Not so fast. Stay still and lay down your arms. You are surrounded." {newline}
     The voice is coming from behind you, but as you turn to look, you see only the dark forest.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_2.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -94,7 +94,7 @@ scene_3 = Scene.create!(
     {npc2} "Sing one yourself, minstrel. The only song I'll ever sing will be at your funeral." {newline}
     As your two underlings continue their endless bickering, you sense something... you feel the wind being cut next to your cheeks, accompanied by a hissing sound. There's no mistaking it: the flight of an arrow. {newline}
      "Lay down your arms and a funeral won't be necessary. You are surrounded."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_3.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -108,7 +108,7 @@ scene_4 = Scene.create!(
     You observe as Halia gathers her belongings and Ziraldo takes another swig. As she stands up, however, you notice a rustling in the leaves to your left. As you look towards it, you see something coming out of some bushes. It looks like... an arrowtip! Before you can warn her you see the arrow being loosened. A moment passes, and you hear a thud. Halia lies on the ground before you, motionless. {newline}
     ? "Lay down your arms. You are surrounded and outnumbered." {newline}
     The voice is coming from behind you, but as you turn to look, you see only the dark forest.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_4.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -120,7 +120,7 @@ scene_5 = Scene.create!(
     ? “I assure you, monkey, I never miss. That was a warning shot.” {newline}
     The first voice is heard again. Calm and assertive. {newline}
     ? “Should these thieves move a single muscle, do not hesitate to end their miserable lives, sister.“
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_5.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -130,7 +130,7 @@ scene_6 = Scene.create!(
   story: %(
     Silence rules over the glade for what feels like minutes. Tension hangs in the air. Finally, a male elf reveals himself and draws out his sword, as the familiar voice comes from his lips. {newline}
     {npc1} "I am Sir Raelys, captain of the "Last Legion". Trust me when I say: you are surrounded and my men have their sights trained on you. Now comply with my demands. I'll believe you are no threat once you are unarmed."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_6.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -142,17 +142,16 @@ scene_7 = Scene.create!(
     {npc2} "Heed your captain, monkey!". {newline}
     {npc1} "I'll do no such thing! I will not yield! ''I bow to no one!''" {newline}
     Before you can admonish the drunken lout for his insubordination, he draws his blade and rushes towards the woods, and all hell breaks loose. Arrows start flying towards your camp, and one of them hits you square in the chest, knocking you down.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_7.background.attach(io: background, filename: "background", content_type: "image/png")
-
 
 scene_8 = Scene.create!(
   tale: tale_1,
   story: %(
     As soon as you give the order, Ziraldo draws his blade and darts towards the woods, and all hell breaks loose. Arrows start flying towards your camp, and one of them hits you square in the chest, knocking you down.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_8.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -161,7 +160,7 @@ scene_9 = Scene.create!(
   tale: tale_1,
   story: %(
     ? "We are the children of the very forest you trespass upon. Now you have the option of leaving peacefully, or dying foolishly."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_9.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -175,7 +174,7 @@ scene_10 = Scene.create!(
     {npc2} "Unless we get to it first, hare." {newline}
     The calm voice from before takes a furious tone after hearing the insult. {newline}
     ? "Control your lackeys! I will repeat myself: lay down your arms or suffer the consequences!"
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_10.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -184,7 +183,7 @@ scene_11 = Scene.create!(
   tale: tale_1,
   story: %(
     {npc1} "Many elves have been knighted since the Aurea Act. You can believe as you wish, it matters little to me. I will you ask again: will you comply and lay down your arms?"
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_11.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -195,7 +194,7 @@ scene_12 = Scene.create!(
     As you finish uttering your words, the realization hits you: they will be your last. You look towards your left, from where the female voice was coming, and see, for a fraction of a second, the glint of an arrowhead. As it is loosened, you hear your companions shouting and drawing their wepons. {newline}
     You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can’t help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
     You are dead...
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_12.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -204,7 +203,7 @@ scene_13 = Scene.create!(
   tale: tale_1,
   story: %(
     You are dead.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_13.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -220,7 +219,7 @@ scene_14 = Scene.create!(
     Then, darkness takes you once more. {newline}
     Once you come to, you feel your hands are bound. The forest is dark once more, and some of your horses have ran off. On the ground, the bodies of Ziraldo, Halia, and the elf who was threatening you earlier. Jorek is nowhere to be seen. {newline}
     Before you, three figures stand tall. The massive man you saw earlier is covered in blood, but unharmed. A female elf, her bow pointed towards you, and her face consumed with rage. And an unkown figure, face clad in a mask and bearing a staff.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_14.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -229,7 +228,7 @@ scene_15 = Scene.create!(
   tale: tale_1,
   story: %(
     The elf's face turns somber. She looks to her right and speaks.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_15.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -238,7 +237,7 @@ scene_16 = Scene.create!(
   tale: tale_1,
   story: %(
     The elf's face turns sour, and she grits her teeth. She looks to her right and speaks.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_16.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -257,7 +256,7 @@ scene_17 = Scene.create!(
     {npc2} "I wish to recover the relics that were stolen from my people by that dragon. As did our late captain, need I remind you?" {newline}
     The man clad in the iron mask turns towards you. {newline}
     {npc1} "Speak. What say you?"
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_17.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -272,7 +271,7 @@ scene_18 = Scene.create!(
     {npc3} "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
     {npc3} "Can you bind them to their word?" {newline}
     {npc1} "I shall render the vow magical, yet it must be uttered willingly."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_18.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -287,7 +286,7 @@ scene_19 = Scene.create!(
     {npc3} "If they refuse, let me be the one to chop off their heads." {newline}
     {npc1} "Let us try and avoid further beheadings, please?" {newline}
     {npc2} "Decide."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_19.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -299,7 +298,7 @@ scene_20 = Scene.create!(
     But before he reaches his target, Barnabas lifts his staff and holds the dwarf suspended midair. You see Valena draw her bow and nock an arrow, pointing it towards him. Before she can fire it, your hear the swing of the axe. {newline}
     {npc1} "Die, scum!" {newline}
     You are dead...
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_20.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -311,7 +310,7 @@ scene_21 = Scene.create!(
     The elf says the last work mockinly. Still, Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     {npc2} "Captain? I cannot believe this..." {newline}
     {npc3} "I expect we shall depart at first light?"
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_21.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -324,7 +323,7 @@ scene_22 = Scene.create!(
     {npc2} "I will make sure you live to regret the murder of Sir Raelys, little one." {newline}
     {npc1} "Worry not, you oaf. I can send you to him whenever you wish me to." {newline}
     {npc3} "I expect we shall depart at first light?"
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_22.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -337,7 +336,7 @@ scene_23 = Scene.create!(
     The pain in your chest surges. Your breath falters. You fall to your knees.
 
     You are dead...
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_23.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -346,7 +345,7 @@ scene_24 = Scene.create!(
   tale: tale_1,
   story: %(
     As soon as you are untied, all of your new comrades start moving and complying with their assigned tasks. They seem to obey you, at the very least. But none of them trade words with you.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_24.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -358,7 +357,7 @@ scene_25 = Scene.create!(
     Jorek moves towards you, keeping a watchful eye on your new companions. He grabs a knife and cuts your bindings. {newline}
     {npc1} "I hope they do not slit our throats in the night. I will sleep with one eye open for the foreseeable future. Let us tend to our fallen." {newline}
     As soon as you are untied, all of your new comrades start moving and complying with their assigned tasks. They seem to obey you, at the very least. But they only trade passing words with you.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_25.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -370,7 +369,7 @@ scene_26 = Scene.create!(
     He starts dragging the bodies of Halia and Ziraldo, and arranges them neatly into a pile, surrounded by leaves, twigs, and firewood from the campfire. {newline}
     {npc1} "This is a weird custom of yours, if you don't mind me saying. Back in Tuquoc we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
     Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_26.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -380,7 +379,7 @@ scene_27 = Scene.create!(
   story: %(
     Jorek nods in comtemplation, as you move to grab a burning log from the campfire and toss it into the funeral pyre. Slowly, the fire catches on, and soon the bodies of your comrades are set ablaze. {newline}
     {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_27.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -390,7 +389,7 @@ scene_28 = Scene.create!(
   story: %(
     Jorek nods in resignation, as you move to grab a burning log from the campfire and toss it into the funeral pyre. Slowly, the fire catches on, and soon the bodies of your comrades are set ablaze. {newline}
     {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_28.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -402,7 +401,7 @@ scene_29 = Scene.create!(
     Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
     Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards Ardrath's Hoard. {newline}
     End of Act I...
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_29.background.attach(io: background, filename: "background", content_type: "image/png")
@@ -414,11 +413,10 @@ scene_30 = Scene.create!(
     Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
     Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards Ardrath's Hoard. {newline}
     End of Act I...
-  )
+  ),
 )
 background = URI.open(background_url)
 scene_30.background.attach(io: background, filename: "background", content_type: "image/png")
-
 
 # =============================================================================================================
 # CHOICES
@@ -434,9 +432,9 @@ Choice.create!(action: "What do I think? I act. Let us search for him.", result:
 
 # scene 2
 Choice.create!(action: "You missed.", result: "", next_scene: scene_5, scene: scene_2)
-Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_2 )
-Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_2 )
-Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_2 )
+Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_2)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_2)
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_2)
 
 # scene 3
 Choice.create!(action: "Show yourselves! We mean no harm!", result: "", next_scene: scene_6, scene: scene_3)
@@ -449,10 +447,10 @@ Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike
 
 # scene 5
 Choice.create!(action: "Monkey? So you are elves.", result: "", next_scene: scene_9, scene: scene_5)
-Choice.create!(action: "You dare call us thieves?", result: "", next_scene: scene_10, scene: scene_5 )
+Choice.create!(action: "You dare call us thieves?", result: "", next_scene: scene_10, scene: scene_5)
 
 # scene 6
-Choice.create!(action: "Sir Raelys? You expect me to believe you a noble?", result: "", next_scene: scene_11, scene: scene_6 )
+Choice.create!(action: "Sir Raelys? You expect me to believe you a noble?", result: "", next_scene: scene_11, scene: scene_6)
 Choice.create!(action: "Lay down your arms, and instruct your companions to do the same", result: { peace: 1 }, next_scene: scene_7, scene: scene_6)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_6)
 
@@ -468,20 +466,20 @@ Choice.create!(action: "Lay down your arms, and instruct your companions to do t
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_9)
 
 # scene 10
-Choice.create!(action: "What Choices, ''hare''?", result: "", next_scene: scene_12, scene: scene_10 )
+Choice.create!(action: "What Choices, ''hare''?", result: "", next_scene: scene_12, scene: scene_10)
 Choice.create!(action: "Show yourselves! We mean no harm!", result: { peace: 1 }, next_scene: scene_6, scene: scene_10)
-Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_10 )
-Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_10 )
+Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_10)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_10)
 
 # scene 11
-Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: {peace: 1 }, next_scene: scene_7, scene: scene_11)
+Choice.create!(action: "Lay down your arms, and instruct your companions to do the same.", result: { peace: 1 }, next_scene: scene_7, scene: scene_11)
 Choice.create!(action: "We are called The Dead Men for a reason, cowards. Strike true!", result: "", next_scene: scene_8, scene: scene_11)
 
 # scene 12
 Choice.create!(action: "You are dead.", result: "", next_scene: scene_13, scene: scene_12)
 
 # scene 14
-Choice.create!(action: "My friends lie dead! And so does your leader! What is the point of so much bloodshed!? Release me and we can come to terms!", result: {peace: 1 }, next_scene: scene_15, scene: scene_14)
+Choice.create!(action: "My friends lie dead! And so does your leader! What is the point of so much bloodshed!? Release me and we can come to terms!", result: { peace: 1 }, next_scene: scene_15, scene: scene_14)
 Choice.create!(action: "You savages, do you have any idea who you have crossed? Release me, or I'll have my friend kill each and every one of you!", result: "", next_scene: scene_16, scene: scene_14)
 
 # scene 15
@@ -493,13 +491,13 @@ Choice.create!(action: "They talk amongst themselves.", result: "", next_scene: 
 # scene 17
 Choice.create!(action: "You wish to ally with us? Are you completely mad?", result: "", next_scene: scene_18, scene: scene_17)
 Choice.create!(action: "I have argued for peace from the very start! You were the ones who attacked us!", result: {
-  #ONLY IF PEACEFUL
-  }, next_scene: scene_19, scene: scene_17)
+ #ONLY IF PEACEFUL
+                 }, next_scene: scene_19, scene: scene_17)
 
 # scene 18
 Choice.create!(action: "I... accept. I will lead you. But do not believe for a moment I will forget what you have done.", result: {
-  # + Bound
-  }, next_scene: scene_21, scene: scene_18)
+ # + Bound
+                 }, next_scene: scene_21, scene: scene_18)
 Choice.create!(action: "I am a Dead Man to the end. Do what you must.", result: "", next_scene: scene_20, scene: scene_18)
 
 # scene 19
@@ -640,8 +638,6 @@ Popup.create!(name: "Aurea Act", description: "An incredibly recent development 
 Popup.create!(name: "King", description: "King Edmon, the half-elven bastard child of the late King Omen, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
 
 Popup.create!(name: "Kingdom", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
-
-Popup.create!(name: "Confrars", description: "A caring term used by members of a Confraternity to address one another, similar to being called a sibling.")
 
 Popup.create!(name: "Tuquoc", description: "The capital city of the Kingdom of the Dwarves, located far away in the west, under the mountains and past the great ocean.")
 
