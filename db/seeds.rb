@@ -12,7 +12,7 @@ background_url = "https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802000/
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin")
+user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin", admin: true)
 
 # =============================================================================================================
 # TALES
@@ -30,45 +30,40 @@ narrative = Narrative.create!(user: user)
 
 # halia
 halia = Npc.create!(name: "Halia")
-halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
+halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
 
 # ziraldo
 ziraldo = Npc.create!(name: "Ziraldo")
-ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/ziraldo.png"), content_type: "image/png", filename: ziraldo.name)
+ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/ziraldo.png"), content_type: "image/png", filename: ziraldo.name)
 
 # jorek
 jorek = Npc.create!(name: "Jorek")
-jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/jorek.png"), content_type: "image/png", filename: jorek.name)
+jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/jorek.png"), content_type: "image/png", filename: jorek.name)
 
 # sir raelys
 sir_raelys = Npc.create!(name: "Sir Raelys")
-sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/sir_raelys.png"), content_type: "image/png", filename: sir_raelys.name)
+sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973950/The%20Hoard%20of%20Adrarth/characters-game/raelys.png"), content_type: "image/png", filename: sir_raelys.name)
 
 # valena
 valena = Npc.create!(name: "Valena")
-valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
+valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638978145/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
 
 # agronak
 agronak = Npc.create!(name: "Agronak")
-agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/agronak.png"), content_type: "image/png", filename: agronak.name)
+agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638978106/The%20Hoard%20of%20Adrarth/characters-game/agronak1.png"), content_type: "image/png", filename: agronak.name)
 
 # barnabas
 barnabas = Npc.create!(name: "Barnabas")
-barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638801999/The%20Hoard%20of%20Adrarth/characters-game/barnabas.png"), content_type: "image/png", filename: barnabas.name)
+barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/barnabas.png"), content_type: "image/png", filename: barnabas.name)
 
 # =============================================================================================================
 # SCENES
 # =============================================================================================================
-scene_0 = Scene.create!(
-  tale: tale_1,
-  story: %(
-    Welcome, {pc_name}, to the [Kingdom], a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n
-  )
-)
 
 scene_1 = Scene.create!(
   tale: tale_1,
   story: %(
+    Welcome, {pc_name}, to the [Kingdom], a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a [Confraternity] called 'The Dead Men'. You and your companions are on a months long journey on the trail of [Ardrath's Hoard]. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
     {npc1} "Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     {npc2} "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
@@ -430,7 +425,7 @@ scene_30.background.attach(io: background, filename: "background", content_type:
 # =============================================================================================================
 
 # scene 0
-Choice.create!(action: "Start your journey...", result: " ", next_scene: scene_1, scene: scene_0)
+# Choice.create!(action: "Start your journey...", result: " ", next_scene: scene_1, scene: scene_1)
 
 # scene 1
 Choice.create!(action: "I think you should stop worrying. Jorek can take care of himself.", result: " ", next_scene: scene_3, scene: scene_1)
@@ -546,85 +541,85 @@ Choice.create!(action: "There is no need to mourn the dead. Their flesh is consu
 # ENCOUNTER
 # =============================================================================================================
 # scene 1
-Encounter.create!(scene: scene_1, npc: halia)
+Encounter.create!(scene: scene_1, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_1, npc: ziraldo, npc_position: "right")
 
 # scene 2
-Encounter.create!(scene: scene_2, npc: halia)
+Encounter.create!(scene: scene_2, npc: halia, npc_position: "left")
 
 # scene 3
-Encounter.create!(scene: scene_3, npc: ziraldo)
-Encounter.create!(scene: scene_3, npc: halia)
+Encounter.create!(scene: scene_3, npc: ziraldo, npc_position: "left")
+Encounter.create!(scene: scene_3, npc: halia, npc_position: "right")
 
 # scene 4
-Encounter.create!(scene: scene_4, npc: halia)
-Encounter.create!(scene: scene_4, npc: ziraldo)
+Encounter.create!(scene: scene_4, npc: halia, npc_position: "left")
+Encounter.create!(scene: scene_4, npc: ziraldo, npc_position: "right")
 
 # scene 6
-Encounter.create!(scene: scene_6, npc: sir_raelys)
+Encounter.create!(scene: scene_6, npc: sir_raelys, npc_position: "left")
 
 # scene 7
-Encounter.create!(scene: scene_7, npc: ziraldo)
-Encounter.create!(scene: scene_7, npc: sir_raelys)
+Encounter.create!(scene: scene_7, npc: ziraldo, npc_position: "left")
+Encounter.create!(scene: scene_7, npc: sir_raelys, npc_position: "right")
 
 # scene 10
-Encounter.create!(scene: scene_10, npc: halia)
-Encounter.create!(scene: scene_10, npc: ziraldo)
+Encounter.create!(scene: scene_10, npc: halia, npc_position: "left")
+Encounter.create!(scene: scene_10, npc: ziraldo, npc_position: "right")
 
 # scene 11
-Encounter.create!(scene: scene_11, npc: sir_raelys)
+Encounter.create!(scene: scene_11, npc: sir_raelys, npc_position: "left")
 
 # scene 14
-Encounter.create!(scene: scene_14, npc: jorek)
+Encounter.create!(scene: scene_14, npc: jorek, npc_position: "left")
 
 # scene 17
-Encounter.create!(scene: scene_17, npc: barnabas)
-Encounter.create!(scene: scene_17, npc: valena)
-Encounter.create!(scene: scene_17, npc: agronak)
+Encounter.create!(scene: scene_17, npc: barnabas, npc_position: "left")
+Encounter.create!(scene: scene_17, npc: valena, npc_position: "right")
+Encounter.create!(scene: scene_17, npc: agronak, npc_position: "middle")
 
 # scene 18
-Encounter.create!(scene: scene_18, npc: barnabas)
-Encounter.create!(scene: scene_18, npc: agronak)
-Encounter.create!(scene: scene_18, npc: valena)
+Encounter.create!(scene: scene_18, npc: barnabas, npc_position: "left")
+Encounter.create!(scene: scene_18, npc: agronak, npc_position: "right")
+Encounter.create!(scene: scene_18, npc: valena, npc_position: "middle")
 
 # scene 19
-Encounter.create!(scene: scene_19, npc: valena)
-Encounter.create!(scene: scene_19, npc: barnabas)
-Encounter.create!(scene: scene_19, npc: agronak)
+Encounter.create!(scene: scene_19, npc: valena, npc_position: "left")
+Encounter.create!(scene: scene_19, npc: barnabas, npc_position: "right")
+Encounter.create!(scene: scene_19, npc: agronak, npc_position: "middle")
 
 # scene 20
-Encounter.create!(scene: scene_20, npc: agronak)
+Encounter.create!(scene: scene_20, npc: agronak, npc_position: "left")
 
 # scene 21
-Encounter.create!(scene: scene_21, npc: valena)
-Encounter.create!(scene: scene_21, npc: jorek)
-Encounter.create!(scene: scene_21, npc: barnabas)
+Encounter.create!(scene: scene_21, npc: valena, npc_position: "left")
+Encounter.create!(scene: scene_21, npc: jorek, npc_position: "right")
+Encounter.create!(scene: scene_21, npc: barnabas, npc_position: "middle")
 
 # scene 22
-Encounter.create!(scene: scene_22, npc: jorek)
-Encounter.create!(scene: scene_22, npc: agronak)
-Encounter.create!(scene: scene_22, npc: barnabas)
+Encounter.create!(scene: scene_22, npc: jorek, npc_position: "left")
+Encounter.create!(scene: scene_22, npc: agronak, npc_position: "right")
+Encounter.create!(scene: scene_22, npc: barnabas, npc_position: "middle")
 
 # scene 23
-Encounter.create!(scene: scene_23, npc: barnabas)
+Encounter.create!(scene: scene_23, npc: barnabas, npc_position: "left")
 
 # scene 25
-Encounter.create!(scene: scene_25, npc: jorek)
+Encounter.create!(scene: scene_25, npc: jorek, npc_position: "left")
 
 # scene 26
-Encounter.create!(scene: scene_26, npc: jorek)
+Encounter.create!(scene: scene_26, npc: jorek, npc_position: "left")
 
 # scene 27
-Encounter.create!(scene: scene_27, npc: jorek)
+Encounter.create!(scene: scene_27, npc: jorek, npc_position: "left")
 
 # scene 28
-Encounter.create!(scene: scene_28, npc: jorek)
+Encounter.create!(scene: scene_28, npc: jorek, npc_position: "left")
 
 # scene 29
-Encounter.create!(scene: scene_29, npc: jorek)
+Encounter.create!(scene: scene_29, npc: jorek, npc_position: "left")
 
 # scene 30
-Encounter.create!(scene: scene_30, npc: jorek)
+Encounter.create!(scene: scene_30, npc: jorek, npc_position: "left")
 
 # =============================================================================================================
 # POPUPS
