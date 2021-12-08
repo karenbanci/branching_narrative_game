@@ -53,7 +53,7 @@
   justify-content: center;
 }
 
-#dialogue {
+.dialogue {
   background-color: rgba($dialogue-grey, 0.6);
   justify-content: center;
   border-radius: 21px;
@@ -62,12 +62,34 @@
   padding: 2rem;
 }
 
-#dialogue p {
+.dialogue p {
   text-align: center;
   font-size: 18px;
   font-weight: light;
   color: #000000;
   margin: 0;
+}
+
+.arrow {
+  color: $dark;
+  opacity: 1.0;
+  position: absolute;
+  right: 5%;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  -10px); }
+  65%  { transform: translate(0, 0px); }
+  to   { transform: translate(0, -10px); }
 }
 
 #actions {
@@ -83,4 +105,16 @@
 
 .button-choice:hover {
   color: black;
+}
+
+.popup {
+  color: $red;
+  &:hover {
+    color: $gold;
+  }
+}
+
+.popover {
+  padding: 10px;
+  border-radius: 15px;
 }
