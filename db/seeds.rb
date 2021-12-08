@@ -12,7 +12,7 @@ background_url = "https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802000/
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "admin@admin.com", password: "batata", username: "Admin")
+user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin", admin: true)
 
 # =============================================================================================================
 # TALES
@@ -46,11 +46,11 @@ sir_raelys.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image
 
 # valena
 valena = Npc.create!(name: "Valena")
-valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638976455/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
+valena.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638978145/The%20Hoard%20of%20Adrarth/characters-game/valena.png"), content_type: "image/png", filename: valena.name)
 
 # agronak
 agronak = Npc.create!(name: "Agronak")
-agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/agronak.png"), content_type: "image/png", filename: agronak.name)
+agronak.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638978106/The%20Hoard%20of%20Adrarth/characters-game/agronak1.png"), content_type: "image/png", filename: agronak.name)
 
 # barnabas
 barnabas = Npc.create!(name: "Barnabas")

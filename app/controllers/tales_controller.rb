@@ -3,6 +3,7 @@ class TalesController < ApplicationController
 
   def index
     @tales = Tale.all
+    redirect_to index_path, alert: "You are not authorized" unless current_user.admin
   end
 
   def show

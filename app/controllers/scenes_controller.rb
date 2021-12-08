@@ -1,6 +1,7 @@
 class ScenesController < ApplicationController
   before_action :set_scene, only: %i[show edit update destroy]
   def show
+    Narrative.create(user: current_user) if current_user.narratives.first.nil?
     @scene = Scene.find(params[:id])
 
     # Lógica de popups
