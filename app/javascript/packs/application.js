@@ -27,5 +27,5 @@ import { backgroundAudio } from '../components/audio';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initNarrative();
-  backgroundAudio();
+  //backgroundAudio();
 });
