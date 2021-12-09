@@ -34,7 +34,7 @@
       </div>
 
       <%# Display de dialogo %>
-      <div class="dialogue">
+      <div id="dialogue">
         <% @story.each_with_index do |dialogue, index| %>
           <p class="story-line <%= "d-none" unless index.zero? %>"><%= dialogue.html_safe %></p>
         <% end %>
