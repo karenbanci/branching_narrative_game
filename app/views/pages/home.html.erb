@@ -26,7 +26,7 @@
       <div class="modal-body">
           <%= form_with url: narratives_path, method: 'PATCH' do |f| %>
           <%= f.text_field :pc_name %>
-          <%= f.submit "Begin Your Adventure" class="btn btn-success" %>
+          <%= f.submit "Begin Your Adventure" class="btn btn-success" 'data-turbolinks':false %>
         <% end %>
       </div>
     </div>
