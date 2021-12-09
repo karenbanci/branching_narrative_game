@@ -1,10 +1,35 @@
-<div class="home-pg">
-  <h1 class="home-title">Treebranch Games</h1>
-  <% if current_user %>
-   <%= link_to "PLAY NOW", index_path, class: "btn btn-outline-light" %>
-  <% else %>
-    <%= link_to "PLAY NOW", new_user_session_path, class: "btn btn-outline-light" %>
-  <% end %>
-  <%= link_to  "Register now!", new_user_registration_path, class: "btn btn-danger mt-5" %>
+<div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdnb.artstation.com/p/assets/images/images/001/905/079/large/geoffrey-ernault-thecontractlq.jpg?1454486469);">
+  <div class="container text-center">
+    <h1 class="title">The Hoard of Ardrarth</h1>
+
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#name-box">
+      PLAY NOW
+    </button>
+
+    <div class="footer">
+      © 2021 TreeBranch Games ™   Batch#766 | Bernardo Monclaro | Bruno Neumann | Eduardo Piccin | Karen Banci
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="name-box" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please name character</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <%= form_with url: narratives_path, method: 'PATCH' do |f| %>
+          <%= f.text_field :pc_name %>
+          <%= f.submit "Begin Your Adventure" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 <%= audio_tag("music_home.mp3", autoplay: true, loop: true) %>

@@ -2,7 +2,9 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    redirect_to index_path if current_user
+    @narrative = Narrative.first
+
+    # redirect_to index_path
   end
 
   def devs
