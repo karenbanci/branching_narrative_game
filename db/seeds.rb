@@ -7,8 +7,6 @@ require "open-uri"
 # Tale.destroy_all
 # User.destroy_all
 
-background_url = "https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802000/The%20Hoard%20of%20Adrarth/characters-game/background1.jpg"
-
 #=============================================================================================================
 # USERS
 # =============================================================================================================
@@ -17,7 +15,7 @@ user = User.create!(email: "admin@admin.com", password: "123456789", username: "
 # =============================================================================================================
 # TALES
 # =============================================================================================================
-tale_1 = Tale.create!(name: "Ardrath's Hoard", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", user: user)
+tale_1 = Tale.create!(name: "Ardrath's Hoard", description: "The Kingdom of Dalrath, the largest human nation ever created, is at the center of the world when it comes to politics, technology, magic, and wealth. The realm has seen its fair share of strife and war, but currently its inhabitants live in an era of peace. <br> <br> That is precisely why so many mercenaries, soldiers of fortune, grave-robbers, and even adventurous nobles have banded together in search of fame, glory, and riches. When there is no adventure to be found at home, one can be certain that in the outskirts and the wilds, there is much treasure and danger to be found.", user: user)
 
 # =============================================================================================================
 # NARRATIVES
@@ -38,7 +36,7 @@ ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/up
 
 # jorek
 jorek = Npc.create!(name: "Jorek")
-jorek.photo.attach(io: URI.open("https://res.cloudinary.com/nicolasenne/image/upload/v1638996697/samples/jorek_ljoaut.png"), content_type: "image/png", filename: jorek.name)
+jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1639059198/The%20Hoard%20of%20Adrarth/characters-game/jorek.png"), content_type: "image/png", filename: jorek.name)
 
 # sir raelys
 sir_raelys = Npc.create!(name: "Sir Raelys")
@@ -63,7 +61,7 @@ barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/u
 scene_1 = Scene.create!(
   tale: tale_1,
   story: %(
-    Welcome, {pc_name}, to the Kingdom, a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a Confraternity called 'The Dead Men'. You and your companions are on a months long journey on the trail of Ardrath's Hoard. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
+    Welcome, {pc_name}, to the Realm, a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a Confraternity called 'The Dead Men'. You and your companions are on a months long journey on the trail of Ardrath's Hoard. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
     {npc1} "Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     {npc2} "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     {npc1} "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
@@ -71,8 +69,6 @@ scene_1 = Scene.create!(
     {npc1} "I refuse to argue with a vagabond. What do you think, captain?"
   ),
 )
-background = URI.open(background_url)
-scene_1.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_2 = Scene.create!(
   tale: tale_1,
@@ -84,8 +80,6 @@ scene_2 = Scene.create!(
     The voice is coming from behind you, but as you turn to look, you see only the dark forest.
   ),
 )
-background = URI.open(background_url)
-scene_2.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_3 = Scene.create!(
   tale: tale_1,
@@ -96,8 +90,6 @@ scene_3 = Scene.create!(
      "Lay down your arms and a funeral won't be necessary. You are surrounded."
   ),
 )
-background = URI.open(background_url)
-scene_3.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_4 = Scene.create!(
   tale: tale_1,
@@ -110,8 +102,6 @@ scene_4 = Scene.create!(
     The voice is coming from behind you, but as you turn to look, you see only the dark forest.
   ),
 )
-background = URI.open(background_url)
-scene_4.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_5 = Scene.create!(
   tale: tale_1,
@@ -122,8 +112,6 @@ scene_5 = Scene.create!(
     ? “Should these thieves move a single muscle, do not hesitate to end their miserable lives, sister.“
   ),
 )
-background = URI.open(background_url)
-scene_5.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_6 = Scene.create!(
   tale: tale_1,
@@ -132,8 +120,6 @@ scene_6 = Scene.create!(
     {npc1} "I am Sir Raelys, captain of the "Last Legion". Trust me when I say: you are surrounded and my men have their sights trained on you. Now comply with my demands. I'll believe you are no threat once you are unarmed."
   ),
 )
-background = URI.open(background_url)
-scene_6.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_7 = Scene.create!(
   tale: tale_1,
@@ -144,8 +130,6 @@ scene_7 = Scene.create!(
     Before you can admonish the drunken lout for his insubordination, he draws his blade and rushes towards the woods, and all hell breaks loose. Arrows start flying towards your camp, and one of them hits you square in the chest, knocking you down.
   ),
 )
-background = URI.open(background_url)
-scene_7.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_8 = Scene.create!(
   tale: tale_1,
@@ -153,8 +137,6 @@ scene_8 = Scene.create!(
     As soon as you give the order, Ziraldo draws his blade and darts towards the woods, and all hell breaks loose. Arrows start flying towards your camp, and one of them hits you square in the chest, knocking you down.
   ),
 )
-background = URI.open(background_url)
-scene_8.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_9 = Scene.create!(
   tale: tale_1,
@@ -162,8 +144,6 @@ scene_9 = Scene.create!(
     ? "We are the children of the very forest you trespass upon. Now you have the option of leaving peacefully, or dying foolishly."
   ),
 )
-background = URI.open(background_url)
-scene_9.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_10 = Scene.create!(
   tale: tale_1,
@@ -176,8 +156,6 @@ scene_10 = Scene.create!(
     ? "Control your lackeys! I will repeat myself: lay down your arms or suffer the consequences!"
   ),
 )
-background = URI.open(background_url)
-scene_10.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_11 = Scene.create!(
   tale: tale_1,
@@ -185,8 +163,6 @@ scene_11 = Scene.create!(
     {npc1} "Many elves have been knighted since the Aurea Act. You can believe as you wish, it matters little to me. I will you ask again: will you comply and lay down your arms?"
   ),
 )
-background = URI.open(background_url)
-scene_11.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_12 = Scene.create!(
   tale: tale_1,
@@ -196,8 +172,6 @@ scene_12 = Scene.create!(
     You are dead...
   ),
 )
-background = URI.open(background_url)
-scene_12.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_13 = Scene.create!(
   tale: tale_1,
@@ -205,8 +179,6 @@ scene_13 = Scene.create!(
     You are dead.
   ),
 )
-background = URI.open(background_url)
-scene_13.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_14 = Scene.create!(
   tale: tale_1,
@@ -221,8 +193,6 @@ scene_14 = Scene.create!(
     Before you, three figures stand tall. The massive man you saw earlier is covered in blood, but unharmed. A female elf, her bow pointed towards you, and her face consumed with rage. And an unkown figure, face clad in a mask and bearing a staff.
   ),
 )
-background = URI.open(background_url)
-scene_14.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_15 = Scene.create!(
   tale: tale_1,
@@ -230,8 +200,6 @@ scene_15 = Scene.create!(
     The elf's face turns somber. She looks to her right and speaks.
   ),
 )
-background = URI.open(background_url)
-scene_15.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_16 = Scene.create!(
   tale: tale_1,
@@ -239,8 +207,6 @@ scene_16 = Scene.create!(
     The elf's face turns sour, and she grits her teeth. She looks to her right and speaks.
   ),
 )
-background = URI.open(background_url)
-scene_16.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_17 = Scene.create!(
   tale: tale_1,
@@ -258,23 +224,19 @@ scene_17 = Scene.create!(
     {npc1} "Speak. What say you?"
   ),
 )
-background = URI.open(background_url)
-scene_17.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_18 = Scene.create!(
   tale: tale_1,
   story: %(
     {npc1} "On the contrary: it is the most logical decision." {newline}
     {npc2} "I disagree. Why would we ask our prisoner to lead us? Let us chop off their head and be done with this." {newline}
-    {npc3} "And go back? Or go through with the quest and risk antagonizing the Kingdom? Consider our proposal, monkey. {newline} We all stand to gain from it." {newline}
+    {npc3} "And go back? Or go through with the quest and risk antagonizing the Realm? Consider our proposal, monkey. {newline} We all stand to gain from it." {newline}
     {npc2} "This is foolish. Don't forget there is an armed dwarf sneaking about in these bushes." {newline}
     {npc3} "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
     {npc3} "Can you bind them to their word?" {newline}
     {npc1} "I shall render the vow magical, yet it must be uttered willingly."
   ),
 )
-background = URI.open(background_url)
-scene_18.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_19 = Scene.create!(
   tale: tale_1,
@@ -288,8 +250,6 @@ scene_19 = Scene.create!(
     {npc2} "Decide."
   ),
 )
-background = URI.open(background_url)
-scene_19.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_20 = Scene.create!(
   tale: tale_1,
@@ -300,8 +260,6 @@ scene_20 = Scene.create!(
     You are dead...
   ),
 )
-background = URI.open(background_url)
-scene_20.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_21 = Scene.create!(
   tale: tale_1,
@@ -312,8 +270,6 @@ scene_21 = Scene.create!(
     {npc3} "I expect we shall depart at first light?"
   ),
 )
-background = URI.open(background_url)
-scene_21.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_22 = Scene.create!(
   tale: tale_1,
@@ -325,8 +281,6 @@ scene_22 = Scene.create!(
     {npc3} "I expect we shall depart at first light?"
   ),
 )
-background = URI.open(background_url)
-scene_22.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_23 = Scene.create!(
   tale: tale_1,
@@ -338,8 +292,6 @@ scene_23 = Scene.create!(
     You are dead...
   ),
 )
-background = URI.open(background_url)
-scene_23.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_24 = Scene.create!(
   tale: tale_1,
@@ -347,8 +299,6 @@ scene_24 = Scene.create!(
     As soon as you are untied, all of your new comrades start moving and complying with their assigned tasks. They seem to obey you, at the very least. But none of them trade words with you.
   ),
 )
-background = URI.open(background_url)
-scene_24.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_25 = Scene.create!(
   tale: tale_1,
@@ -359,8 +309,6 @@ scene_25 = Scene.create!(
     As soon as you are untied, all of your new comrades start moving and complying with their assigned tasks. They seem to obey you, at the very least. But they only trade passing words with you.
   ),
 )
-background = URI.open(background_url)
-scene_25.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_26 = Scene.create!(
   tale: tale_1,
@@ -371,8 +319,6 @@ scene_26 = Scene.create!(
     Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
   ),
 )
-background = URI.open(background_url)
-scene_26.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_27 = Scene.create!(
   tale: tale_1,
@@ -381,8 +327,6 @@ scene_27 = Scene.create!(
     {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
   ),
 )
-background = URI.open(background_url)
-scene_27.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_28 = Scene.create!(
   tale: tale_1,
@@ -391,8 +335,6 @@ scene_28 = Scene.create!(
     {npc1} "Should we say a few words? I knew them only a short amount of time, but it seems like the proper thing to do."
   ),
 )
-background = URI.open(background_url)
-scene_28.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_29 = Scene.create!(
   tale: tale_1,
@@ -403,8 +345,6 @@ scene_29 = Scene.create!(
     End of Act I...
   ),
 )
-background = URI.open(background_url)
-scene_29.background.attach(io: background, filename: "background", content_type: "image/png")
 
 scene_30 = Scene.create!(
   tale: tale_1,
@@ -415,8 +355,6 @@ scene_30 = Scene.create!(
     End of Act I...
   ),
 )
-background = URI.open(background_url)
-scene_30.background.attach(io: background, filename: "background", content_type: "image/png")
 
 # =============================================================================================================
 # CHOICES
@@ -629,6 +567,10 @@ Popup.create!(name: "Ardrath's Hoard", description: "A legendary treasure stolen
 
 Popup.create!(name: "Elgenwode", description: "A vast span of untamed wilderness to which the elves were banished in ages long past." )
 
+Popup.create!(name: "Confrars", description: "An endearing term used by members of a Confrary to address each other, similar in spirit to being called a brother or a sister." )
+
+Popup.create!(name: "confrars", description: "An endearing term used by members of a Confrary to address each other, similar in spirit to being called a brother or a sister." )
+
 Popup.create!(name: "monkey", description: "A derogatory term used to describe humans, due to their bearded faces and hairy bodies, similar to apes." )
 
 Popup.create!(name: "hare", description: "A derogatory term used to describe elves, due to their long and pointed ears, similar to rabbits." )
@@ -637,7 +579,7 @@ Popup.create!(name: "Aurea Act", description: "An incredibly recent development 
 
 Popup.create!(name: "King", description: "King Edmon, the half-elven bastard child of the late King Omen, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
 
-Popup.create!(name: "Kingdom", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
+Popup.create!(name: "Realm", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
 
 Popup.create!(name: "Tuquoc", description: "The capital city of the Kingdom of the Dwarves, located far away in the west, under the mountains and past the great ocean.")
 
