@@ -26,6 +26,12 @@
       <% end %>
 
     <div class="container box-dialog">
+      <%# Display das escolhas %>
+      <div id="actions" class="d-none mt-3">
+        <% @scene.choices.each do |choice| %>
+          <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-dark" %></p>
+        <% end %>
+      </div>
 
       <%# Display de dialogo %>
       <div class="dialogue">
@@ -33,14 +39,6 @@
           <p class="story-line <%= "d-none" unless index.zero? %>"><%= dialogue.html_safe %></p>
         <% end %>
         <i class="arrow floating fas fa-caret-down"></i>
-      </div>
-
-
-      <%# Display das escolhas %>
-      <div id="actions" class="d-none mt-3">
-        <% @scene.choices.each do |choice| %>
-          <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-dark" %></p>
-        <% end %>
       </div>
     </div>
   </div>

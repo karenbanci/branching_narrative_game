@@ -38,7 +38,7 @@ ziraldo.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/up
 
 # jorek
 jorek = Npc.create!(name: "Jorek")
-jorek.photo.attach(io: URI.open("https://res.cloudinary.com/nicolasenne/image/upload/v1638996697/samples/jorek_ljoaut.png"), content_type: "image/png", filename: jorek.name)
+jorek.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1639050480/The%20Hoard%20of%20Adrarth/characters-game/jorek1.png"), content_type: "image/png", filename: jorek.name)
 
 # sir raelys
 sir_raelys = Npc.create!(name: "Sir Raelys")
