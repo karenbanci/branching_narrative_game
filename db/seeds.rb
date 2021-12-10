@@ -61,7 +61,7 @@ barnabas.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/u
 scene_1 = Scene.create!(
   tale: tale_1,
   story: %(
-    Welcome, {pc_name} to the Realm, a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a Confraternity called 'The Dead Men'. You and your companions are on a months long journey on the trail of Ardrath's Hoard. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
+    Welcome, {pc_name}, to the Realm, a magical land populated by humans, elves, dwarves, and many other types of creatures. You are a lesser human noble, the captain of a Confraternity called 'The Dead Men'. You and your companions are on a months long journey on the trail of Ardrath's Hoard. You have set up camp in the woods and gathered around the campfire to unwind from a hard day of travel... \n {newline}
     <b> {npc1} </b>"Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     <b> {npc2} </b> "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     <b> {npc1} </b> "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
