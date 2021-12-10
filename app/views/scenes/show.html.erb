@@ -1,6 +1,10 @@
 <div id="story-data" data-story="<%= @story.to_json %>" data-story-index="0"></div>
 
-<div class="background" style="background-image: url(<%= image_path "background.jpg" %>)">
+<div class="background" style="background-image: url(<%= image_path [31,32].include?(@scene.id) ? "background_act2.jpg" : "background.jpg" %>)">
+
+
+
+
   <div class="show-stories">
     <div class="navbar-game">
       <!-- Botões dos Modais -->
@@ -78,7 +82,7 @@
           <%# CARD 1 %>
           <div class="card-character card-1">
             <div class="image-character border border-danger">
-              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638802348/The%20Hoard%20of%20Adrarth/characters-card/halia-card.png") %>
+              <%= image_tag("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1639141136/The%20Hoard%20of%20Adrarth/characters-card/card_halia.png") %>
             </div>
             <div class="title">Halia</div>
           </div>
