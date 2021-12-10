@@ -10,7 +10,7 @@ require "open-uri"
 #=============================================================================================================
 # USERS
 # =============================================================================================================
-user = User.create!(email: "admin@admin.com", password: "123456789", username: "Admin", admin: true)
+user = User.create!(email: "admin@admin.com", password: "lewagon", username: "Admin", admin: true)
 
 # =============================================================================================================
 # TALES
@@ -339,7 +339,7 @@ scene_29 = Scene.create!(
   tale: tale_1,
   story: %(
     <b> {npc1} </b> "And what a struggle it will be. Slaying a dragon... I hope we are up to the task. Rest, my confrars." {newline}
-    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
+    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted. {newline}
     Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards Ardrath's Hoard. {newline}
     End of Act I...
   ),
@@ -349,9 +349,39 @@ scene_30 = Scene.create!(
   tale: tale_1,
   story: %(
     Jorek takes your cue and remains silent as well, wathcing as the bodies burn in front of him. {newline}
-    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted.
+    Once the funeral is complete, you and Jorek move to your tents, and he assures you he will sleep with one eye open tonight, until you can be sure the newcomers can be trusted. {newline}
     Inside your tent, the calmness of the forest takes over, and nothing but the chirping of animals can be heard. It feels almost peaceful. You are keenly aware that it is, in fact, the calm before the storm. Tomorrow you once again begin marching towards Ardrath's Hoard. {newline}
     End of Act I...
+  ),
+)
+
+scene_31 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    A few days have passed since you assumed command of the Last Legion. While your new companions have shown themselves to be capable, they are also very distant. Agronak seems to have little interest in conversation, Barnabas tends to keep to himself and his books, and when Valena addresses you, it is with a mocking tone. You have enjoyed the company of Jorek, and his cheerful demeanor has come back after the mourning of your late comrades. {newline}
+    You and your confrars have come upon the small village of Beowode, the last settlement before officially leaving the borders of the [Realm] and entering the territory of the [Elgenwode]. It is a good opportunity to gather supplies and unwind before setting out on the trail of [Ardrath's Horde] once more...
+  ),
+)
+
+scene_32 = Scene.create!(
+  tale: tale_1,
+  story: %(
+    The village of Beowode is little more than a footnote on most maps, due to its faraway location from the heart of the [Kingdom] and negligible political and economical expression. As you and your [confrars] enter the small settlement, you are certain that all eyes are on you.
+
+    Barnabas "Tread carefully. We do not want to attract unwanted attention."
+
+    Jorek "These folk act as if they've never seen a band of heavily armed mean looking mercenaries walking into their town, ha!"
+
+    Valena "They have certainly never seen a dwarf. You should avoid trouble most out of all of us."
+
+    Jorek "Of course, sure! I am always the problem! What about you, elf? I thought most of you kind hid their pointy ears in human lands to avoid trouble?"
+
+    Valena "This village is so far east it could just as well be elven lands. We are practically in the [Elgenwode] already. Trust me, I shall find no trouble mingling amongst these peasants."
+
+    As your companions converse, the village children are the first to ignore your presence, and resume their playing. Soon, dogs and other pets lose their interest in your group, and join the kids in their endless chasing and playful screaming.
+
+    The gaze of most of the adults linger on you, however, and the elderly folk seem to be gossiping between themselves. One thing is certain: your presence has not gone unnoticed.
+
   ),
 )
 
@@ -472,6 +502,19 @@ Choice.create!(action: '"There is no need to mourn the dead. Their flesh is cons
 # scene 28
 Choice.create!(action: "Remain silent.", result: "", next_scene: scene_30, scene: scene_28)
 Choice.create!(action: '"There is no need to mourn the dead. Their flesh is consumed and their minds returned to the realm of God. The hardships of life are endured by the living. And so, we must remain in our struggle."', result: "", next_scene: scene_29, scene: scene_28)
+
+# scene 29
+Choice.create!(action: "Begin Act II!", result: "", next_scene: scene_31, scene: scene_29)
+
+# scene 30
+Choice.create!(action: "Begin Act II!", result: "", next_scene: scene_31, scene: scene_30)
+
+# scene 31
+Choice.create!(action: "Head into the village.", result: "", next_scene: scene_32, scene: scene_31)
+
+# scene 32
+Choice.create!(action: '"I have a bad feeling about this. We should split up and do what we have to do quickly, then leave this town before trouble finds us."', result: "", next_scene: scene_1, scene: scene_32)
+Choice.create!(action: '"What are you lot staring at?! My name is {pc_name}, and I am the captain of The Last Legion! Now clear off, lest trouble finds you!"', result: "", next_scene: scene_1, scene: scene_32)
 
 # =============================================================================================================
 # ENCOUNTER
