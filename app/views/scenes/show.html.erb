@@ -1,6 +1,10 @@
 <div id="story-data" data-story="<%= @story.to_json %>" data-story-index="0"></div>
 
-<div class="background" style="background-image: url(<%= image_path "background.jpg" %>)">
+<div class="background" style="background-image: url(<%= image_path [31,32].include?(@scene.id) ? "background_act2.jpg" : "background.jpg" %>)">
+
+
+
+
   <div class="show-stories">
     <div class="navbar-game">
       <!-- Botões dos Modais -->
