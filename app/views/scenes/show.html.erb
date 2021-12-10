@@ -41,16 +41,7 @@
       <%# Display das escolhas %>
       <div id="actions" class="d-none mt-3">
         <% @scene.choices.each do |choice| %>
-        <% if [8,12,14].include?(choice.next_scene.id) || [8,12,14].include?(@scene.id)%>
-          <p><%= link_to choice.action,
-           scene_path(choice.next_scene),
-            class: "button-choice btn btn-dark",
-            'data-turbolinks':false %></p>
-           <% else   %>
-           <p><%= link_to choice.action,
-           scene_path(choice.next_scene),
-            class: "button-choice btn btn-dark" %></p>
-            <% end %>
+        <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-dark" %></p>
         <% end %>
       </div>
 
@@ -157,5 +148,4 @@
 </div>
 
 <!-- Música -->
-<%#= audio_tag("spring-wood.mp3", autoplay: true, loop: true) %>
-<%= audio_tag [8,12,14].include?(@scene.id) ? "final-battle-music.mp3" : "spring-wood.mp3", autoplay: true, loop: true %>
+<%= audio_tag("spring-wood.mp3", autoplay: true, loop: true) %>
