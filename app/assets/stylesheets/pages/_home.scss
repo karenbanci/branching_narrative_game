@@ -53,6 +53,18 @@
   background-color: $dialogue-grey;
 }
 
-.modal-body {
+.modal-show {
   background-color: $dialogue-grey;
+  padding: 20px 40px;
+}
+
+.btn-modal-show {
+  background-color: #a7a7a7;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 0px 0px 0px 20px;
+}
+
+.modal-title-show {
+  margin-left: auto;
 }
