@@ -214,7 +214,7 @@ scene_17 = Scene.create!(
     ?: "What do you think Barnabas?" {newline}
     The masked man speaks, his voice echoing from behind the metal: {newline}
     <b> {npc1} </b> "Sir Faelyn is dead. We have no captain." {newline}
-   brute spea  {newline}
+    The brute speaks up:  {newline}
     ?: "We don't need one. Who cares if they call us a Confraternity or not? I care not who leads us, Valena. We should kill this weakling and hunt down the dwarf!" {newline}
     <b> {npc2} </b> "Even if we manage to uncover Ardrath's Hoard, we would have no claim to it. We would be treated as little more than a band of thieves, Agronak." {newline}
     <b> {npc1} </b> "We would lack the legitamacy afforded by the King." {newline}

@@ -18,7 +18,7 @@
 }
 
 .character {
-  height: 90vh;
+  height: 80vh;
   position: absolute;
   bottom: 0;
   z-index: 0;
@@ -50,7 +50,7 @@
 }
 
 .box-dialog {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
