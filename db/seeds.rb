@@ -65,7 +65,7 @@ scene_1 = Scene.create!(
     <b> {npc1} </b>"Night is upon us, he should be back by now. Has Jorek not returned?" {newline}
     <b> {npc2} </b> "Hush, woman. I'm trying to finish my drink. If you are so concerned about the dwarf, go after him yourself." {newline}
     <b> {npc1} </b> "I dare you to call me woman again you drunkard. Perhaps I should carve my name on your forehead so you don't forget it?" {newline}
-    <b> {npc2} </b> "Hah! I'd like to see you try. Why didn't you go scouting tonight, anyways? Scared of the Elgenwode, are you?" {newline}
+    <b> {npc2} </b> "Hah! I'd like to see you try. Why didn't you go scouting tonight, anyways? Scared of the Oldewode, are you?" {newline}
     <b> {npc1} </b> "I refuse to argue with a vagabond. What do you think, captain?"
   ),
 )
@@ -314,7 +314,7 @@ scene_26 = Scene.create!(
   story: %(
     <b> {npc1} </b> "I won't miss Ziraldo much, to be frank. But Halia deserved better. At least I managed to get their leader... An elven noble? I did not even know such a thing existed. Anyways, I'm sorry I couldn't find an opening sooner, captain." {newline}
     He starts dragging the bodies of Halia and Ziraldo, and arranges them neatly into a pile, surrounded by leaves, twigs, and firewood from the campfire. {newline}
-    <b> {npc1} </b> "This is a weird custom of yours, if you don't mind me saying. Back in Tuquoc we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
+    <b> {npc1} </b> "This is a weird custom of yours, if you don't mind me saying. Back home we bury our dead; it is a form of returning them to the stone from which they came. Why do you burn your dead?" {newline}
     Jorek finishes the construction of the makeshift funeral pyre, and takes one last look at his former friends, before turning to you, awaiting your response.
   ),
 )
@@ -362,7 +362,7 @@ scene_31 = Scene.create!(
   story: %(
     A few days have passed since you assumed command of the Last Legion. While your new companions have shown themselves to be capable, they are also very distant. {newline}
     Agronak seems to have little interest in conversation, Barnabas tends to keep to himself and his books, and when Valena addresses you, it is with a mocking tone. You have enjoyed the company of Jorek, and his cheerful demeanor has come back after the mourning of your late comrades. {newline}
-    You and your confrars have come upon the small village of Beowode, the last settlement before officially leaving the borders of the Realm and entering the territory of the Elgenwode. It is a good opportunity to gather supplies and unwind before setting out on the trail of Ardrath's Horde once more...
+    You and your confrars have come upon the small village of Beowode, the last settlement before officially leaving the borders of the Realm and entering the territory of the Oldewode. It is a good opportunity to gather supplies and unwind before setting out on the trail of Ardrath's Horde once more...
   ),
 )
 
@@ -379,7 +379,7 @@ scene_32 = Scene.create!(
 
     <b>{npc2}</b> "Of course, sure! I am always the problem! What about you, elf? I thought most of you kind hid their pointy ears in human lands to avoid trouble?" {newline}
 
-    <b>{npc3}</b> "This village is so far east it could just as well be elven lands. We are practically in the Elgenwode already. Trust me, I shall find no trouble mingling amongst these peasants." {newline}
+    <b>{npc3}</b> "This village is so far east it could just as well be elven lands. We are practically in the Oldewode already. Trust me, I shall find no trouble mingling amongst these peasants." {newline}
 
     As your companions converse, the village children are the first to ignore your presence, and resume their playing. Soon, dogs and other pets lose their interest in your group, and join the kids in their endless chasing and playful screaming. {newline}
 
@@ -645,15 +645,15 @@ Encounter.create!(scene: scene_32, npc: valena, npc_position: "middle")
 # POPUPS
 # =============================================================================================================
 
-Popup.create!(name: "Confraternity", description: "A band of brothers and sisters led by member of the nobility gathered together for a common cause." )
+Popup.create!(name: "Confraternity", description: "An official mercenary group led by a noble." )
 
 Popup.create!(name: "Ardrath's Hoard", description: "A legendary treasure stolen from elvish lands rumored to be guarded by Ardrath, one of the last living dragons." )
 
-Popup.create!(name: "Elgenwode", description: "A vast span of untamed wilderness to which the elves were banished in ages long past." )
+Popup.create!(name: "Oldewode", description: "A vast span of untamed wilderness to which the elves were banished in ages long past." )
 
-Popup.create!(name: "Confrars", description: "An endearing term used by members of a Confrary to address each other, similar in spirit to being called a brother or a sister." )
+Popup.create!(name: "Confrars", description: "An endearing term used by members of a Confraternity to address each other, similar in spirit to being called a brother or a sister." )
 
-Popup.create!(name: "confrars", description: "An endearing term used by members of a Confrary to address each other, similar in spirit to being called a brother or a sister." )
+Popup.create!(name: "confrars", description: "An endearing term used by members of a Confraternity to address each other, similar in spirit to being called a brother or a sister." )
 
 Popup.create!(name: "monkey", description: "A derogatory term used to describe humans, due to their bearded faces and hairy bodies, similar to apes." )
 
@@ -661,10 +661,6 @@ Popup.create!(name: "hare", description: "A derogatory term used to describe elv
 
 Popup.create!(name: "Aurea Act", description: "An incredibly recent development in human-elvish relations, the Aurea Act freed all elves from slavery and allowed them to become knights." )
 
-Popup.create!(name: "King", description: "King Edmon, the half-elven bastard child of the late King Omen, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
+Popup.create!(name: "King", description: "King Edmund, child of the late King Omund, and the current leader of the Kingdom of Dalrath, who ascended to the throne following a bloody civil war." )
 
-Popup.create!(name: "Realm", description: "The Kingdom of Dalrath, founded almost 500 years ago by the unification of Saint King Kyros, is the largest human nation ever created." )
-
-Popup.create!(name: "Tuquoc", description: "The capital city of the Kingdom of the Dwarves, located far away in the west, under the mountains and past the great ocean.")
-
-Popup.create!(name: "God", description: "The official religion of the human Kingdom is defined by the Church, which holds that the Sun is the personification of God, and the sacred gift of life is derived from it.")
+Popup.create!(name: "Realm", description: "The Kingdom of Dalrath, founded almost 500 years, is the largest human nation ever created." )
