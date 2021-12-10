@@ -266,7 +266,7 @@ scene_21 = Scene.create!(
     <b> {npc1} </b> "Come out, dwarf. It seems we are all brothers and sisters now. Confrars." {newline}
     The elf says the last work mockinly. Still, Jorek jumps down from a tree, landing somewhat awkwardly on the ground. He looks at you, confused, and shakes his head. {newline}
     <b> {npc2} </b> "Captain? I cannot believe this..." {newline}
-    {npc3} "I expect we shall depart at first light?"
+    <b> {npc3} </b> "I expect we shall depart at first light?"
   ),
 )
 
