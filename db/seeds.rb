@@ -15,7 +15,7 @@ user = User.create!(email: "admin@admin.com", password: "lewagon", username: "Ad
 # =============================================================================================================
 # TALES
 # =============================================================================================================
-tale_1 = Tale.create!(name: "Ardrath's Hoard", description: "The Kingdom of Kharak, the largest human nation ever created, is at the center of the world when it comes to politics, technology, magic, and wealth. The realm has seen its fair share of strife and war, but currently its inhabitants live in an era of peace. <br> <br> That is precisely why so many mercenaries, soldiers of fortune, grave-robbers, and even adventurous nobles have banded together in search of fame, glory, and riches. For when there is no adventure to be found at home, one can be certain that men shall seek it in the outskirts and the wilds, there is much treasure and danger to be found.", user: user)
+tale_1 = Tale.create!(name: "Ardrath's Hoard", description: "The Kingdom of Kharak, the largest human nation ever created, is at the middle of the world when it comes to politics, technology, magic, and wealth. The realm has seen its fair share of strife and war, but currently its inhabitants live in an era of peace. <br> <br> That is precisely why so many mercenaries, soldiers of fortune, grave-robbers, and even adventurous nobles have banded together in search of fame, glory, and riches. For when there is no adventure to be found at home, one can be certain that men shall seek it in the outskirts and the wilds, there is much treasure and danger to be found.", user: user)
 
 # =============================================================================================================
 # NARRATIVES
@@ -28,7 +28,7 @@ narrative = Narrative.create!(user: user)
 
 # halia
 halia = Npc.create!(name: "Halia")
-halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1638973675/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
+halia.photo.attach(io: URI.open("https://res.cloudinary.com/dpsoxgtgz/image/upload/v1639141092/The%20Hoard%20of%20Adrarth/characters-game/halia.png"), content_type: "image.png", filename: "#{halia.name}.png")
 
 # ziraldo
 ziraldo = Npc.create!(name: "Ziraldo")
@@ -355,6 +355,8 @@ scene_30 = Scene.create!(
   ),
 )
 
+############################################ ATO 2 ###############################################################
+
 scene_31 = Scene.create!(
   tale: tale_1,
   story: %(
@@ -543,17 +545,17 @@ Encounter.create!(scene: scene_5, npc: ziraldo, npc_position: "right")
 # scene 6
 Encounter.create!(scene: scene_6, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_6, npc: ziraldo, npc_position: "right")
-Encounter.create!(scene: scene_6, npc: sir_raelys, npc_position: "center")
+Encounter.create!(scene: scene_6, npc: sir_raelys, npc_position: "middle")
 
 # scene 7
 Encounter.create!(scene: scene_7, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_7, npc: ziraldo, npc_position: "right")
-Encounter.create!(scene: scene_7, npc: sir_raelys, npc_position: "center")
+Encounter.create!(scene: scene_7, npc: sir_raelys, npc_position: "middle")
 
 # scene 8
 Encounter.create!(scene: scene_8, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_8, npc: ziraldo, npc_position: "right")
-Encounter.create!(scene: scene_8, npc: sir_raelys, npc_position: "center")
+Encounter.create!(scene: scene_8, npc: sir_raelys, npc_position: "middle")
 
 # scene 9
 Encounter.create!(scene: scene_9, npc: halia, npc_position: "left")
@@ -566,17 +568,17 @@ Encounter.create!(scene: scene_10, npc: ziraldo, npc_position: "right")
 # scene 11
 Encounter.create!(scene: scene_11, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_11, npc: ziraldo, npc_position: "right")
-Encounter.create!(scene: scene_11, npc: sir_raelys, npc_position: "center")
+Encounter.create!(scene: scene_11, npc: sir_raelys, npc_position: "middle")
 
 # scene 12
 Encounter.create!(scene: scene_12, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_12, npc: ziraldo, npc_position: "right")
-Encounter.create!(scene: scene_12, npc: jorek, npc_position: "center")
+Encounter.create!(scene: scene_12, npc: jorek, npc_position: "middle")
 
 # scene 14
 Encounter.create!(scene: scene_14, npc: halia, npc_position: "left")
 Encounter.create!(scene: scene_14, npc: ziraldo, npc_position: "right")
-Encounter.create!(scene: scene_14, npc: jorek, npc_position: "center")
+Encounter.create!(scene: scene_14, npc: jorek, npc_position: "middle")
 
 # scene 17
 Encounter.create!(scene: scene_17, npc: barnabas, npc_position: "left")
@@ -637,7 +639,7 @@ Encounter.create!(scene: scene_30, npc: jorek, npc_position: "left")
 # scene 32
 Encounter.create!(scene: scene_32, npc: barnabas, npc_position: "right")
 Encounter.create!(scene: scene_32, npc: jorek, npc_position: "left")
-Encounter.create!(scene: scene_32, npc: valena, npc_position: "center")
+Encounter.create!(scene: scene_32, npc: valena, npc_position: "middle")
 
 # =============================================================================================================
 # POPUPS
