@@ -148,4 +148,5 @@
 </div>
 
 <!-- Música -->
-<%= audio_tag("nature_music.mp3", autoplay: true, loop: true) %>
+<%#= audio_tag("spring-wood.mp3", autoplay: true, loop: true) %>
+<%= audio_tag [31,32].include?(@scene.id) ? "battle-song.mp3" : "spring-wood.mp3", autoplay: true, loop: true %>
