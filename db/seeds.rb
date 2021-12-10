@@ -84,7 +84,7 @@ scene_2 = Scene.create!(
 scene_3 = Scene.create!(
   tale: tale_1,
   story: %(
-    <b> {npc1} </b> "Cheers to that, capt'n! Stop worrying that pretty face of yours and sing us a song, wil? {newwline}
+    <b> {npc1} </b> "Cheers to that, capt'n! Stop worrying that pretty face of yours and sing us a song, wil? {newline}
     <b> {npc2} </b> "Sing one yourself, minstrel. The only song I'll ever sing will be at your funeral." {newline}
     As your two underlings continue their endless bickering, you sense something... you feel the wind being cut next to your cheeks, accompanied by a hissing sound. There's no mistaking it: the flight of an arrow. {newline}
     ? "Lay down your arms and a funeral won't be necessary. You are surrounded."
@@ -358,27 +358,28 @@ scene_30 = Scene.create!(
 scene_31 = Scene.create!(
   tale: tale_1,
   story: %(
-    A few days have passed since you assumed command of the Last Legion. While your new companions have shown themselves to be capable, they are also very distant. Agronak seems to have little interest in conversation, Barnabas tends to keep to himself and his books, and when Valena addresses you, it is with a mocking tone. You have enjoyed the company of Jorek, and his cheerful demeanor has come back after the mourning of your late comrades. {newline}
-    You and your confrars have come upon the small village of Beowode, the last settlement before officially leaving the borders of the [Realm] and entering the territory of the [Elgenwode]. It is a good opportunity to gather supplies and unwind before setting out on the trail of [Ardrath's Horde] once more...
+    A few days have passed since you assumed command of the Last Legion. While your new companions have shown themselves to be capable, they are also very distant. {newline}
+    Agronak seems to have little interest in conversation, Barnabas tends to keep to himself and his books, and when Valena addresses you, it is with a mocking tone. You have enjoyed the company of Jorek, and his cheerful demeanor has come back after the mourning of your late comrades. {newline}
+    You and your confrars have come upon the small village of Beowode, the last settlement before officially leaving the borders of the Realm and entering the territory of the Elgenwode. It is a good opportunity to gather supplies and unwind before setting out on the trail of Ardrath's Horde once more...
   ),
 )
 
 scene_32 = Scene.create!(
   tale: tale_1,
   story: %(
-    The village of Beowode is little more than a footnote on most maps, due to its faraway location from the heart of the [Kingdom] and negligible political and economical expression. As you and your [confrars] enter the small settlement, you are certain that all eyes are on you.
+    The village of Beowode is little more than a footnote on most maps, due to its faraway location from the heart of the Kingdom and negligible political and economical expression. As you and your confrars enter the small settlement, you are certain that all eyes are on you.  {newline}
 
-    Barnabas "Tread carefully. We do not want to attract unwanted attention."
+    <b>{npc1}</b> "Tread carefully. We do not want to attract unwanted attention." {newline}
 
-    Jorek "These folk act as if they've never seen a band of heavily armed mean looking mercenaries walking into their town, ha!"
+    <b>{npc2}</b> "These folk act as if they've never seen a band of heavily armed mean looking mercenaries walking into their town, ha!"  {newline}
 
-    Valena "They have certainly never seen a dwarf. You should avoid trouble most out of all of us."
+    <b>{npc3}</b> "They have certainly never seen a dwarf. You should avoid trouble most out of all of us." {newline}
 
-    Jorek "Of course, sure! I am always the problem! What about you, elf? I thought most of you kind hid their pointy ears in human lands to avoid trouble?"
+    <b>{npc2}</b> "Of course, sure! I am always the problem! What about you, elf? I thought most of you kind hid their pointy ears in human lands to avoid trouble?" {newline}
 
-    Valena "This village is so far east it could just as well be elven lands. We are practically in the [Elgenwode] already. Trust me, I shall find no trouble mingling amongst these peasants."
+    <b>{npc3}</b> "This village is so far east it could just as well be elven lands. We are practically in the Elgenwode already. Trust me, I shall find no trouble mingling amongst these peasants." {newline}
 
-    As your companions converse, the village children are the first to ignore your presence, and resume their playing. Soon, dogs and other pets lose their interest in your group, and join the kids in their endless chasing and playful screaming.
+    As your companions converse, the village children are the first to ignore your presence, and resume their playing. Soon, dogs and other pets lose their interest in your group, and join the kids in their endless chasing and playful screaming. {newline}
 
     The gaze of most of the adults linger on you, however, and the elderly folk seem to be gossiping between themselves. One thing is certain: your presence has not gone unnoticed.
 
@@ -632,6 +633,11 @@ Encounter.create!(scene: scene_29, npc: jorek, npc_position: "left")
 
 # scene 30
 Encounter.create!(scene: scene_30, npc: jorek, npc_position: "left")
+
+# scene 32
+Encounter.create!(scene: scene_32, npc: barnabas, npc_position: "right")
+Encounter.create!(scene: scene_32, npc: jorek, npc_position: "left")
+Encounter.create!(scene: scene_32, npc: valena, npc_position: "center")
 
 # =============================================================================================================
 # POPUPS
