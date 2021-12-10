@@ -82,7 +82,7 @@ scene_2 = Scene.create!(
 )
 
 scene_3 = Scene.create!(
-  tale: tal
+  tale: tale_1,
   story: %(
     <b> {npc1} </b> "Cheers to that, capt'n! Stop worrying that pretty face of yours and sing us a song, wil? {newwline}
     <b> {npc2} </b> "Sing one yourself, minstrel. The only song I'll ever sing will be at your funeral." {newline}
@@ -92,7 +92,7 @@ scene_3 = Scene.create!(
 )
 
 scene_4 = Scene.create!(
-  tale: tal
+  tale: tale_1,
   story: %(
     <b> {npc1} </b> "I meant about Jorek. God, I'm surrounded by fools." {newline}
     <b> {npc2} </b> "One of those fools is also handsome. Come by my tent tonight, dearest." {newline}
@@ -122,7 +122,7 @@ scene_6 = Scene.create!(
 )
 
 scene_7 = Scene.create!(
-  tale: tale_1
+  tale: tale_1,
   story: %(
     <b> {npc1} </b> "You expect me to surrender? To a hare?" {newline}
     <b> {npc2} </b> "Heed your captain, monkey!". {newline}
@@ -168,7 +168,7 @@ scene_12 = Scene.create!(
   tale: tale_1,
   story: %(
     As you finish uttering your words, the realization hits you: they will be your last. You look towards your left, from where the female voice was coming, and see, for a fraction of a second, the glint of an arrowhead. As it is loosened, you hear your companions shouting and drawing their wepons. {newline}
-    You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can’t help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
+    You feel the arrow pierce deep in your gut, and instinctively your body freezes. Your throat aches, and you can't help but cough heaps of blood. As your body falls down and your head hits the ground, you see Jorek driving one of his knives into the chest of an elf, and a fight breaks around you. {newline}
     You are dead...
   ),
 )
@@ -226,19 +226,19 @@ scene_17 = Scene.create!(
 )
 
 scene_18 = Scene.create!(
-  tale: tale_1
+  tale: tale_1,
   story: %(
     <b> {npc1} </b> "On the contrary: it is the most logical decision." {newline}
     <b> {npc2} </b> "I disagree. Why would we ask our prisoner to lead us? Let us chop off their head and be done with this." {newline}
-    {npc3} "And go back? Or go through with the quest and risk antagonizing the Realm? Forget it, Agronak. As for you, consider our proposal, monkey. We all stand to gain from it." {newline}
+    <b> {npc3} </b> "And go back? Or go through with the quest and risk antagonizing the Realm? Forget it, Agronak. As for you, consider our proposal, monkey. We all stand to gain from it." {newline}
     <b> {npc2} </b> "This is foolish. Don't forget there is an armed dwarf sneaking about in these bushes." {newline}
-    {npc3} "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
+    <b> {npc3} </b> "Think carefully. If you don't value your life, then think on the gold and glory you are passing up." {newline}
     <b> {npc1} </b> "I can render the vow magical, yet it must be uttered willingly."
   ),
 )
 
 scene_19 = Scene.create!(
-  tale: tale_1
+  tale: tale_1,
   story: %(
     <b> {npc1} </b> "Your friend attacked us first. Sir Raelys asked you to surrender." {newline}
     <b> {npc2} </b>  "The situation escalated." {newline}
