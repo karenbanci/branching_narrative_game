@@ -20,7 +20,7 @@
         Map
       </button>
 
-      <%= link_to "Exit", root_path, 'data-turbolinks':false,class: "exit-navbar-game btn btn-dark"%>
+      <%= link_to "Exit", root_path, 'data-turbolinks':false, class: "exit-navbar-game btn btn-dark"%>
     </div>
       <%# Display dos personagens %>
       <% @scene.encounters.each do |encounter| %>
@@ -41,7 +41,16 @@
       <%# Display das escolhas %>
       <div id="actions" class="d-none mt-3">
         <% @scene.choices.each do |choice| %>
-          <p><%= link_to choice.action, scene_path(choice.next_scene), class: "button-choice btn btn-dark" %></p>
+        <% if [8,12,14].include?(choice.next_scene.id) || [8,12,14].include?(@scene.id)%>
+          <p><%= link_to choice.action,
+           scene_path(choice.next_scene),
+            class: "button-choice btn btn-dark",
+            'data-turbolinks':false %></p>
+           <% else   %>
+           <p><%= link_to choice.action,
+           scene_path(choice.next_scene),
+            class: "button-choice btn btn-dark" %></p>
+            <% end %>
         <% end %>
       </div>
 
@@ -149,4 +158,4 @@
 
 <!-- Música -->
 <%#= audio_tag("spring-wood.mp3", autoplay: true, loop: true) %>
-<%= audio_tag [31,32].include?(@scene.id) ? "battle-song.mp3" : "spring-wood.mp3", autoplay: true, loop: true %>
+<%= audio_tag [8,12,14].include?(@scene.id) ? "final-battle-music.mp3" : "spring-wood.mp3", autoplay: true, loop: true %>
